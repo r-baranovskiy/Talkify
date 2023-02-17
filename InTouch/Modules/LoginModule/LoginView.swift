@@ -25,7 +25,8 @@ final class LoginView: UIView {
         placeholder: "Password", isSecure: true)
     
     //Buttons
-    private let loginButton = CustomButton(text: "Войти", isShadow: false)
+    private let loginButton = CustomButton.createNavigationButton(
+        title: "Войти", isShadow: false)
     private let backButton = CustomButton.createBackButton()
     
     private let forgetButton: UIButton = {
@@ -36,13 +37,7 @@ final class LoginView: UIView {
         return button
     }()
     
-    private let googleButton: UIButton = {
-        let button = CustomButton(text: "Google", isShadow: true)
-        button.backgroundColor = .white
-        button.setTitleColor(.darkGray, for: .normal)
-        CustomButton.createGoogleButton(button)
-        return button
-    }()
+    private let googleButton = CustomButton.createGoogleButton()
     
     //MARK: - Init
     

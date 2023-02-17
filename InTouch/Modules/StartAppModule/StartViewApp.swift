@@ -36,8 +36,10 @@ final class StartViewApp: UIView {
         adjustsFontSizeToFitWidth: true)
     
     //Buttons
-    private let loginButton = CustomButton(text: "Войти", isShadow: true)
-    private let registerButton = CustomButton(text: "Регистрация", isShadow: true)
+    private let loginButton = CustomButton.createNavigationButton(
+        title: "Войти", isShadow: false)
+    private let registerButton = CustomButton.createNavigationButton(
+        title: "Регистрация", isShadow: false)
     
     //Containers
     private var propertyStackView = UIStackView()
