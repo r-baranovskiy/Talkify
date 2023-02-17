@@ -16,8 +16,6 @@ final class LoginView: UIView {
     
     private var containerView = UIView()
     
-    private let googleLabel = UILabel(text: "Войти через:", font: .avenir20())
-    
     //TextFields
     private (set) var emailTextField = CustomTextField(
         placeholder: "Email", keyboardType: .emailAddress)
@@ -25,8 +23,7 @@ final class LoginView: UIView {
         placeholder: "Password", isSecure: true)
     
     //Buttons
-    private let loginButton = CustomButton.createNavigationButton(
-        title: "Войти", isShadow: false)
+    private let loginButton = CustomButton.createNavButton(title: "Войти")
     private let backButton = CustomButton.createBackButton()
     
     private let forgetButton: UIButton = {
@@ -36,8 +33,6 @@ final class LoginView: UIView {
         button.setTitleColor(.red, for: .normal)
         return button
     }()
-    
-    private let googleButton = CustomButton.createGoogleButton()
     
     //MARK: - Init
     
@@ -60,8 +55,6 @@ final class LoginView: UIView {
         backButton.addTarget(self, action: #selector(backButtonTapped),
                              for: .touchUpInside)
         forgetButton.addTarget(self, action: #selector(forgetButtonTapped),
-                              for: .touchUpInside)
-        googleButton.addTarget(self, action: #selector(googleButtonTapped),
                                for: .touchUpInside)
     }
     
@@ -86,7 +79,7 @@ final class LoginView: UIView {
     private func setConstraints() {
         addSubviewWithoutTranslates(
             backButton, containerView, emailTextField, passwordTextField,
-            forgetButton, loginButton, googleLabel, googleButton)
+            forgetButton, loginButton)
         
         NSLayoutConstraint.activate([
             backButton.topAnchor.constraint(
@@ -134,18 +127,6 @@ final class LoginView: UIView {
             loginButton.trailingAnchor.constraint(
                 equalTo: containerView.trailingAnchor, constant: -40),
             loginButton.heightAnchor.constraint(equalToConstant: 54),
-            
-            googleLabel.topAnchor.constraint(
-                equalTo: loginButton.bottomAnchor, constant: 40),
-            googleLabel.centerXAnchor.constraint(
-                equalTo: containerView.centerXAnchor),
-            
-            googleButton.topAnchor.constraint(
-                equalTo: googleLabel.bottomAnchor, constant: 20),
-            googleButton.leadingAnchor.constraint(
-                equalTo: containerView.leadingAnchor, constant: 40),
-            googleButton.trailingAnchor.constraint(
-                equalTo: containerView.trailingAnchor, constant: -40)
         ])
     }
 }

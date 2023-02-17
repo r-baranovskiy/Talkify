@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		800B5CD92926120800D9AECF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800B5CD82926120800D9AECF /* AppDelegate.swift */; };
 		800B5CDB2926120800D9AECF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800B5CDA2926120800D9AECF /* SceneDelegate.swift */; };
-		800B5CDD2926120800D9AECF /* StartViewAppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800B5CDC2926120800D9AECF /* StartViewAppController.swift */; };
+		800B5CDD2926120800D9AECF /* StartAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800B5CDC2926120800D9AECF /* StartAppViewController.swift */; };
 		800B5CE22926120B00D9AECF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 800B5CE12926120B00D9AECF /* Assets.xcassets */; };
 		800B5CE52926120B00D9AECF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 800B5CE32926120B00D9AECF /* LaunchScreen.storyboard */; };
 		800CA6CB2949B2CC000096C4 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800CA6CA2949B2CC000096C4 /* Bundle-Decodable.swift */; };
@@ -28,7 +28,7 @@
 		807072EF2947E77700B9A3EB /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807072EE2947E77700B9A3EB /* MainTabBarViewController.swift */; };
 		80A41035292CABD000C527CB /* UIAlertController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A41034292CABD000C527CB /* UIAlertController + Extensions.swift */; };
 		80A6B01129263AF300A25042 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A6B01029263AF300A25042 /* RegisterViewController.swift */; };
-		80A6B021292652B700A25042 /* StartViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A6B020292652B700A25042 /* StartViewApp.swift */; };
+		80A6B021292652B700A25042 /* StartAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A6B020292652B700A25042 /* StartAppView.swift */; };
 		80A6B0252926561800A25042 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A6B0242926561800A25042 /* RegisterView.swift */; };
 		80A6B02A2926594000A25042 /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A6B0292926594000A25042 /* UIView + Extension.swift */; };
 		80A6B02D29265ABC00A25042 /* beerMoney.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80A6B02C29265ABC00A25042 /* beerMoney.ttf */; };
@@ -57,7 +57,7 @@
 /* Begin PBXFileReference section */
 		800B5CD82926120800D9AECF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		800B5CDA2926120800D9AECF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		800B5CDC2926120800D9AECF /* StartViewAppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewAppController.swift; sourceTree = "<group>"; };
+		800B5CDC2926120800D9AECF /* StartAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAppViewController.swift; sourceTree = "<group>"; };
 		800B5CE12926120B00D9AECF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		800B5CE42926120B00D9AECF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		800B5CE62926120B00D9AECF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 		807072EE2947E77700B9A3EB /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		80A41034292CABD000C527CB /* UIAlertController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController + Extensions.swift"; sourceTree = "<group>"; };
 		80A6B01029263AF300A25042 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		80A6B020292652B700A25042 /* StartViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewApp.swift; sourceTree = "<group>"; };
+		80A6B020292652B700A25042 /* StartAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAppView.swift; sourceTree = "<group>"; };
 		80A6B0242926561800A25042 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		80A6B0292926594000A25042 /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		80A6B02C29265ABC00A25042 /* beerMoney.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = beerMoney.ttf; sourceTree = "<group>"; };
@@ -266,8 +266,8 @@
 		80E42076299FF0D000C72CE8 /* StartAppModule */ = {
 			isa = PBXGroup;
 			children = (
-				80A6B020292652B700A25042 /* StartViewApp.swift */,
-				800B5CDC2926120800D9AECF /* StartViewAppController.swift */,
+				80A6B020292652B700A25042 /* StartAppView.swift */,
+				800B5CDC2926120800D9AECF /* StartAppViewController.swift */,
 			);
 			path = StartAppModule;
 			sourceTree = "<group>";
@@ -417,7 +417,7 @@
 			files = (
 				80CD7B5F29451E6300CEFA91 /* UIFont + Extension.swift in Sources */,
 				8049CFA2294C285100F0E1C5 /* Message.swift in Sources */,
-				800B5CDD2926120800D9AECF /* StartViewAppController.swift in Sources */,
+				800B5CDD2926120800D9AECF /* StartAppViewController.swift in Sources */,
 				80A41035292CABD000C527CB /* UIAlertController + Extensions.swift in Sources */,
 				80CA4B8B2955235700D153CE /* Validate.swift in Sources */,
 				800CA6CB2949B2CC000096C4 /* Bundle-Decodable.swift in Sources */,
@@ -428,7 +428,7 @@
 				80C182A6294BBBD400C29BF5 /* ConfiguringCell Protocol.swift in Sources */,
 				800B5CDB2926120800D9AECF /* SceneDelegate.swift in Sources */,
 				80109D252955085E003D5544 /* AuthService.swift in Sources */,
-				80A6B021292652B700A25042 /* StartViewApp.swift in Sources */,
+				80A6B021292652B700A25042 /* StartAppView.swift in Sources */,
 				80E076D929278BED00499ECF /* LoginView.swift in Sources */,
 				80B8BD79294E4248007078D1 /* ChatRequestView.swift in Sources */,
 				80E7740E294DD057002F11AA /* SmileTextField.swift in Sources */,

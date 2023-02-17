@@ -1,16 +1,17 @@
 import UIKit
 
-protocol StartViewAppDelegate: AnyObject {
+protocol StartAppViewDelegate: AnyObject {
     func loginButtonDidTap()
     func registerButtonDidTap()
+    func googleButtonDidTap()
 }
 
 /// This view class that displays in StartViewController
-final class StartViewApp: UIView {
+final class StartAppView: UIView {
     
     //MARK: - UI Constants
     
-    weak var delegate: StartViewAppDelegate?
+    weak var delegate: StartAppViewDelegate?
     
     private var timeIntervalAnimate = 0.5
     
@@ -35,14 +36,19 @@ final class StartViewApp: UIView {
         text: "🌝  Оставайся всегда на связи", font: .markerFelt20(),
         adjustsFontSizeToFitWidth: true)
     
+    private let googleLabel = UILabel(text: "Войти через:", font: .avenir20())
+    
     //Buttons
-    private let loginButton = CustomButton.createNavigationButton(
-        title: "Войти", isShadow: false)
-    private let registerButton = CustomButton.createNavigationButton(
-        title: "Регистрация", isShadow: false)
+    private let googleButton = CustomButton.createGoogleButton()
+    
+    private let loginButton = CustomButton.createNavButton(title: "Вход")
+    
+    private let registerButton = CustomButton.createNavButton(
+        title: "Регистрация")
     
     //Containers
     private var propertyStackView = UIStackView()
+    private var googleButtonStackView = UIStackView()
     private var buttonsStackView = UIStackView()
     
     //MARK: - Init
@@ -53,8 +59,8 @@ final class StartViewApp: UIView {
         showAnimatedMainLabel()
         configurePropertyStackView()
         configureButtonsStackView()
+        configureGoogleButtonStackView()
         setTargets()
-        addSubviews()
         setConstraints()
     }
     
@@ -69,6 +75,8 @@ final class StartViewApp: UIView {
             self, action: #selector(loginButtonTapped), for: .touchUpInside)
         registerButton.addTarget(
             self, action: #selector(registerButtonTapped), for: .touchUpInside)
+        googleButton.addTarget(
+            self, action: #selector(googleButtonTapped), for: .touchUpInside)
     }
     
     @objc private func loginButtonTapped() {
@@ -79,13 +87,11 @@ final class StartViewApp: UIView {
         delegate?.registerButtonDidTap()
     }
     
-    //MARK: - Appearance
-    
-    private func addSubviews() {
-        addSubviewWithoutTranslates(mainLabel)
-        addSubviewWithoutTranslates(propertyStackView)
-        addSubviewWithoutTranslates(buttonsStackView)
+    @objc private func googleButtonTapped() {
+        delegate?.googleButtonDidTap()
     }
+    
+    //MARK: - Appearance
     
     private func showAnimatedMainLabel() {
         let nameLabel = "In Touch"
@@ -117,11 +123,11 @@ final class StartViewApp: UIView {
                     UIView.animate(withDuration: time) {
                         self.stayInTouchLabel.alpha = 1
                     } completion: { _ in
-                        UIView.animate(withDuration: time) {
-                            self.registerButton.isHidden = false
-                            self.loginButton.isHidden = false
+                        UIView.animate(withDuration: time + 1) {
                             self.registerButton.alpha = 0.7
                             self.loginButton.alpha = 0.7
+                            self.googleLabel.alpha = 1
+                            self.googleButton.alpha = 1
                         }
                     }
                 }
@@ -140,13 +146,20 @@ final class StartViewApp: UIView {
         }
     }
     
+    private func configureGoogleButtonStackView() {
+        googleButtonStackView = UIStackView(
+            arrangedSubviews: [googleLabel, googleButton], axis: .vertical,
+            spacing: 20, alignment: .center)
+        googleLabel.alpha = 0
+        googleButton.alpha = 0
+    }
+    
     private func configureButtonsStackView() {
         buttonsStackView = UIStackView(
             arrangedSubviews: [loginButton, registerButton],
-            axis: .vertical, spacing: 20, alignment: .fill)
+            axis: .vertical, spacing: 20, alignment: .center, distribution: .fill)
         
         for element in buttonsStackView.arrangedSubviews {
-            element.isHidden = true
             element.alpha = 0
         }
     }
@@ -154,25 +167,38 @@ final class StartViewApp: UIView {
     //MARK: - Constraints
     
     private func setConstraints() {
+        addSubviewWithoutTranslates(mainLabel, propertyStackView,
+                                    googleButtonStackView, buttonsStackView)
+        
         NSLayoutConstraint.activate([
-            mainLabel.topAnchor.constraint(
-                lessThanOrEqualTo: safeAreaLayoutGuide.topAnchor, constant: 100),
+            loginButton.widthAnchor.constraint(equalToConstant: 100),
+            registerButton.widthAnchor.constraint(equalToConstant: 200),
+            googleButton.widthAnchor.constraint(equalToConstant: 230),
+            
+            mainLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
             mainLabel.leadingAnchor.constraint(
                 equalTo: leadingAnchor, constant: 40),
             mainLabel.trailingAnchor.constraint(
                 equalTo: trailingAnchor, constant: -40),
             
             propertyStackView.topAnchor.constraint(
-                equalTo: mainLabel.bottomAnchor, constant: 50),
+                equalTo: mainLabel.bottomAnchor, constant: 30),
             propertyStackView.leadingAnchor.constraint(
                 equalTo: leadingAnchor, constant: 20),
             propertyStackView.trailingAnchor.constraint(
-                equalTo: self.trailingAnchor, constant: -20),
+                equalTo: trailingAnchor, constant: -20),
+            
+            googleButtonStackView.topAnchor.constraint(
+                equalTo: propertyStackView.bottomAnchor, constant: 50),
+            googleButtonStackView.leadingAnchor.constraint(
+                equalTo: leadingAnchor, constant: 80),
+            googleButtonStackView.trailingAnchor.constraint(
+                equalTo: trailingAnchor, constant: -80),
             
             buttonsStackView.topAnchor.constraint(
-                greaterThanOrEqualTo: propertyStackView.bottomAnchor, constant: 50),
+                greaterThanOrEqualTo: googleButtonStackView.bottomAnchor, constant: 40),
             buttonsStackView.bottomAnchor.constraint(
-                lessThanOrEqualTo: safeAreaLayoutGuide.bottomAnchor, constant: -30),
+                equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20),
             buttonsStackView.leadingAnchor.constraint(
                 equalTo: leadingAnchor, constant: 80),
             buttonsStackView.trailingAnchor.constraint(
@@ -180,3 +206,4 @@ final class StartViewApp: UIView {
         ])
     }
 }
+

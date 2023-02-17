@@ -1,24 +1,24 @@
 import UIKit
 
 /// This class loads first if the user isn't authorised
-final class StartViewAppController: UIViewController {
+final class StartAppViewController: UIViewController {
     
-    private let startViewApp = StartViewApp()
+    private let startAppView = StartAppView()
     
     //MARK: - Lifecycles
     
     override func loadView() {
         super.loadView()
-        view = startViewApp
+        view = startAppView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        startViewApp.delegate = self
+        startAppView.delegate = self
     }
 }
 
-extension StartViewAppController: StartViewAppDelegate {
+extension StartAppViewController: StartAppViewDelegate {
     func loginButtonDidTap() {
         let loginVC = LoginViewController()
         loginVC.modalTransitionStyle = .crossDissolve

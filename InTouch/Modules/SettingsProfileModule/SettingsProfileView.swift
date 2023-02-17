@@ -22,8 +22,7 @@ final class SettingsProfileView: UIView {
     
     //Buttons
     private let backButton = CustomButton.createBackButton()
-    private let goToChatButton = CustomButton.createNavigationButton(
-        title: "Общаться", isShadow: false)
+    private let goToChatButton = CustomButton.createNavButton(title: "Общаться")
     
     //TextFields
     private (set) var nameTextField = CustomTextField.oneLineTextField()

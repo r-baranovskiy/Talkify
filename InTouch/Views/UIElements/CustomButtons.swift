@@ -2,22 +2,16 @@ import UIKit
 
 final class CustomButton {
     
-    static func createNavigationButton(title: String, isShadow: Bool) -> UIButton {
+    static func createNavButton(title: String) -> UIButton {
         let button = UIButton(type: .system)
         button.setTitle(title, for: .normal)
         button.titleLabel?.font = .avenir30()
-        button.backgroundColor = .systemGray
         button.setTitleColor(.label, for: .normal)
+        button.alpha = 1
+        
         button.layer.cornerRadius = 10
-        button.alpha = 0.7
-        
-        if isShadow {
-            button.layer.shadowColor = UIColor.darkGray.cgColor
-            button.layer.shadowRadius = 2
-            button.layer.shadowOpacity = 10
-            button.layer.shadowOffset = CGSize(width: 0, height: 10)
-        }
-        
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.label.cgColor
         return button
     }
     
@@ -48,8 +42,8 @@ final class CustomButton {
         let button = UIButton()
         button.setTitle("Google", for: .normal)
         button.titleLabel?.font = .avenir30()
-        button.backgroundColor = .systemGray
-        button.setTitleColor(.label, for: .normal)
+        button.backgroundColor = .label
+        button.setTitleColor(.systemBackground, for: .normal)
         button.layer.cornerRadius = 10
         button.alpha = 1
         

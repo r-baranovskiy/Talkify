@@ -25,8 +25,7 @@ final class RegisterView: UIView {
     
     //Buttons
     private let backButton = CustomButton.createBackButton()
-    private let registerButton = CustomButton.createNavigationButton(
-        title: "Регистрация", isShadow: false)
+    private let registerButton = CustomButton.createNavButton(title: "Регистрация")
     //MARK: - Init
     
     override init(frame: CGRect) {
