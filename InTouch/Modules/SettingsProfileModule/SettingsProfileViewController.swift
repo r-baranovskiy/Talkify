@@ -1,6 +1,6 @@
 import UIKit
 
-class SettingsProfileViewController: UIViewController, UINavigationControllerDelegate {
+final class SettingsProfileViewController: UIViewController, UINavigationControllerDelegate {
     
     private let settingsProfileView = SettingsProfileView()
     
