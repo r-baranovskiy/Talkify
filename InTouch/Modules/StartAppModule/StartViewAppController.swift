@@ -1,6 +1,7 @@
 import UIKit
 
-class StartViewAppController: UIViewController {
+/// This class loads first if the user isn't authorised
+final class StartViewAppController: UIViewController {
     
     private let startViewApp = StartViewApp()
     

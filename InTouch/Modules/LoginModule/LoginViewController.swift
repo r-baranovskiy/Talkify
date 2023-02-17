@@ -1,5 +1,6 @@
 import UIKit
 
+/// In this class user can authorise with email or phone
 final class LoginViewController: UIViewController {
     
     private let logivView = LoginView()
