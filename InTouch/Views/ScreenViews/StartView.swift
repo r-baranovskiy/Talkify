@@ -1,38 +1,39 @@
 import UIKit
 
-class StartView: UIView {
+protocol StartViewDelegate: AnyObject {
+    func loginButtonDidTap()
+    func registerButtonDidTap()
+}
+
+/// This view class that displays in StartViewController
+final class StartView: UIView {
     
     //MARK: - Constants
+    
+    weak var delegate: StartViewDelegate?
     
     private var timeIntervalAnimate = 0.5
     
     //Labels
-    private let mainLabel = UILabel(text: "",
-                                    font: UIFont(name: KeysFont.logoFont.rawValue,
-                                                 size: 80),
-                                    textColor: .label,
-                                    adjustsFontSizeToFitWidth: true,
-                                    alignment: .center)
+    private let mainLabel = UILabel(
+        text: "", font: UIFont(name: KeysFont.logoFont.rawValue, size: 80),
+        textColor: .label, adjustsFontSizeToFitWidth: true, alignment: .center)
     
-    private let communicatePropertyLabel = UILabel(text: "📨  Общайся со своими друзьями",
-                                                   font: .propertyFont(),
-                                                   textColor: .label,
-                                                   adjustsFontSizeToFitWidth: true)
+    private let communicatePropertyLabel = UILabel(
+        text: "📨  Общайся со своими друзьями", font: .propertyFont(),
+        textColor: .label, adjustsFontSizeToFitWidth: true)
     
-    private let sharePhotosLabel = UILabel(text: "🏞️  Делись фото и видео",
-                                           font: .propertyFont(),
-                                           textColor: .label,
-                                           adjustsFontSizeToFitWidth: true)
+    private let sharePhotosLabel = UILabel(
+        text: "🏞️  Делись фото и видео", font: .propertyFont(),
+        textColor: .label, adjustsFontSizeToFitWidth: true)
     
-    private let shareLocationLabel = UILabel(text: "⛱️  Покажи где ты находишься",
-                                             font: .propertyFont(),
-                                             textColor: .label,
-                                             adjustsFontSizeToFitWidth: true)
+    private let shareLocationLabel = UILabel(
+        text: "⛱️  Покажи где ты находишься", font: .propertyFont(),
+        textColor: .label, adjustsFontSizeToFitWidth: true)
     
-    private let stayInTouchLabel = UILabel(text: "🌝  Оставайся всегда на связи",
-                                           font: .propertyFont(),
-                                           textColor: .label,
-                                           adjustsFontSizeToFitWidth: true)
+    private let stayInTouchLabel = UILabel(
+        text: "🌝  Оставайся всегда на связи", font: .propertyFont(),
+        textColor: .label, adjustsFontSizeToFitWidth: true)
     
     //Buttons
     let loginButton = CustomButton(text: "Войти", isShadow: true)
@@ -50,8 +51,8 @@ class StartView: UIView {
         showAnimatedMainLabel()
         configurePropertyStackView()
         configureButtonsStackView()
+        setTargets()
         addSubviews()
-        
         setConstraints()
     }
     
@@ -59,7 +60,24 @@ class StartView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK: - Settings UI
+    // MARK: - Behaviour
+    
+    private func setTargets() {
+        loginButton.addTarget(
+            self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        registerButton.addTarget(
+            self, action: #selector(registerButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc private func loginButtonTapped() {
+        delegate?.loginButtonDidTap()
+    }
+    
+    @objc private func registerButtonTapped() {
+        delegate?.registerButtonDidTap()
+    }
+    
+    //MARK: - Appearance
     
     private func addSubviews() {
         addSubiewWithoutAutoresizing(mainLabel)
@@ -110,14 +128,10 @@ class StartView: UIView {
     }
     
     private func configurePropertyStackView() {
-        propertyStackView = UIStackView(arrangedSubviews:
-                                            [communicatePropertyLabel,
-                                             sharePhotosLabel,
-                                             shareLocationLabel,
-                                             stayInTouchLabel],
-                                        axis: .vertical,
-                                        spacing: 20,
-                                        alignment: .leading)
+        propertyStackView = UIStackView(
+            arrangedSubviews: [communicatePropertyLabel, sharePhotosLabel,
+                               shareLocationLabel, stayInTouchLabel],
+            axis: .vertical, spacing: 20, alignment: .leading)
         
         for property in propertyStackView.arrangedSubviews {
             property.alpha = 0
@@ -125,12 +139,9 @@ class StartView: UIView {
     }
     
     private func configureButtonsStackView() {
-        buttonsStackView = UIStackView(arrangedSubviews:
-                                        [loginButton,
-                                         registerButton],
-                                       axis: .vertical,
-                                       spacing: 20,
-                                       alignment: .fill)
+        buttonsStackView = UIStackView(
+            arrangedSubviews: [loginButton, registerButton],
+            axis: .vertical, spacing: 20, alignment: .fill)
         
         for element in buttonsStackView.arrangedSubviews {
             element.isHidden = true
@@ -142,18 +153,28 @@ class StartView: UIView {
     
     private func setConstraints() {
         NSLayoutConstraint.activate([
-            mainLabel.topAnchor.constraint(lessThanOrEqualTo: self.safeAreaLayoutGuide.topAnchor, constant: 100),
-            mainLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 40),
-            mainLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -40),
+            mainLabel.topAnchor.constraint(
+                lessThanOrEqualTo: safeAreaLayoutGuide.topAnchor, constant: 100),
+            mainLabel.leadingAnchor.constraint(
+                equalTo: leadingAnchor, constant: 40),
+            mainLabel.trailingAnchor.constraint(
+                equalTo: trailingAnchor, constant: -40),
             
-            propertyStackView.topAnchor.constraint(equalTo: mainLabel.bottomAnchor, constant: 50),
-            propertyStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            propertyStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            propertyStackView.topAnchor.constraint(
+                equalTo: mainLabel.bottomAnchor, constant: 50),
+            propertyStackView.leadingAnchor.constraint(
+                equalTo: leadingAnchor, constant: 20),
+            propertyStackView.trailingAnchor.constraint(
+                equalTo: self.trailingAnchor, constant: -20),
             
-            buttonsStackView.topAnchor.constraint(greaterThanOrEqualTo: propertyStackView.bottomAnchor, constant: 50),
-            buttonsStackView.bottomAnchor.constraint(lessThanOrEqualTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -30),
-            buttonsStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 80),
-            buttonsStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -80),
+            buttonsStackView.topAnchor.constraint(
+                greaterThanOrEqualTo: propertyStackView.bottomAnchor, constant: 50),
+            buttonsStackView.bottomAnchor.constraint(
+                lessThanOrEqualTo: safeAreaLayoutGuide.bottomAnchor, constant: -30),
+            buttonsStackView.leadingAnchor.constraint(
+                equalTo: leadingAnchor, constant: 80),
+            buttonsStackView.trailingAnchor.constraint(
+                equalTo: trailingAnchor, constant: -80),
         ])
     }
 }

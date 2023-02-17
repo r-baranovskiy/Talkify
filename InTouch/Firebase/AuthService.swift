@@ -1,6 +1,4 @@
 import UIKit
-import FirebaseCore
-import FirebaseFirestore
 import FirebaseAuth
 
 class AuthService {
@@ -9,7 +7,8 @@ class AuthService {
     
     private let auth = Auth.auth()
     
-    func register(email: String?, password: String?, confirmPassword: String?, completion: @escaping (Result<User, Error>) -> Void) {
+    func register(email: String?, password: String?, confirmPassword: String?,
+                  completion: @escaping (Result<User, Error>) -> Void) {
         guard let email = email,
               let password = password,
               let confirmPassword = confirmPassword else {
@@ -22,7 +21,8 @@ class AuthService {
             return
         }
         
-        if !Validate.isFilled(email: email, password: password, confirmPassword: confirmPassword) {
+        if !Validate.isFilled(email: email, password: password,
+                              confirmPassword: confirmPassword) {
             completion(.failure(AuthError.notFilled))
             return
         }
@@ -43,7 +43,8 @@ class AuthService {
         }
     }
     
-    func login(email: String?, password: String?, completion: @escaping (Result<User, Error>) -> Void) {
+    func login(email: String?, password: String?,
+               completion: @escaping (Result<User, Error>) -> Void) {
         guard let email = email,
               let password = password,
               !email.isEmpty,

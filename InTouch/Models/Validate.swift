@@ -2,7 +2,8 @@ import Foundation
 
 class Validate {
     
-    static func isFilled(email: String, password: String, confirmPassword: String) -> Bool {
+    static func isFilled(email: String, password: String,
+                         confirmPassword: String) -> Bool {
         if email.isEmpty,
            password.isEmpty,
            confirmPassword.isEmpty {
