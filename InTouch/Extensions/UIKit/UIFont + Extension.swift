@@ -2,7 +2,11 @@ import UIKit
 
 extension UIFont {
     
-    static func propertyFont() -> UIFont? {
+    static func beerMoney80() -> UIFont? {
+        return UIFont.init(name: "beerMoney", size: 80)
+    }
+    
+    static func markerFelt20() -> UIFont? {
         return UIFont.init(name: "MarkerFelt-Thin", size: 20)
     }
     

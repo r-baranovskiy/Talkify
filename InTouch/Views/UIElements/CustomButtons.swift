@@ -31,17 +31,17 @@ class CustomButton: UIButton {
         return button
     }
     
-    static func createDenyButton() -> UIButton {
-        let button = UIButton(type: .system)
-        button.setTitle("Deny", for: .normal)
-        button.setTitleColor(UIColor(named: KeysColor.denyButtonColor.rawValue), for: .normal)
-        button.backgroundColor = .white
-        button.titleLabel?.font = .laoSangamMN20()
-        button.layer.cornerRadius = 10
-        button.layer.borderWidth = 1.2
-        button.layer.borderColor = UIColor(named: KeysColor.denyButtonColor.rawValue)?.cgColor
-        return button
-    }
+//    static func createDenyButton() -> UIButton {
+//        let button = UIButton(type: .system)
+//        button.setTitle("Deny", for: .normal)
+//        button.setTitleColor(UIColor(named: KeysColor.denyButtonColor.rawValue), for: .normal)
+//        button.backgroundColor = .white
+//        button.titleLabel?.font = .laoSangamMN20()
+//        button.layer.cornerRadius = 10
+//        button.layer.borderWidth = 1.2
+//        button.layer.borderColor = UIColor(named: KeysColor.denyButtonColor.rawValue)?.cgColor
+//        return button
+//    }
     
     static func createGoogleButton(_ googleButton: UIButton) {
         let googleLogo = UIImageView(image: UIImage(named: "googleLogo"))
@@ -60,7 +60,7 @@ class CustomButton: UIButton {
     static func createBackButton() -> UIButton {
         let button = UIButton(type: .system)
         
-        button.setImage(UIImage(systemName: KeysButtonsImages.backButton.rawValue),
+        button.setImage(UIImage(systemName: Images.backButtonImage.rawValue),
                             for: .normal)
         button.setTitle("Отменить", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 22)

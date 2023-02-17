@@ -21,7 +21,7 @@ class ChatRequestView: UIView {
                                                   adjustsFontSizeToFitWidth: true)
     
     let acceptButton = CustomButton.createAcceptButton()
-    let denyButton = CustomButton.createDenyButton()
+    //let denyButton = CustomButton.createDenyButton()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -40,7 +40,7 @@ class ChatRequestView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        acceptButton.applyGradients(cornerRadius: 10)
+        //acceptButton.applyGradients(cornerRadius: 10)
     }
     
     //MARK: - UI Config
@@ -51,12 +51,12 @@ class ChatRequestView: UIView {
     
     private func setupUserContainer() {
         userContainerView.layer.cornerRadius = 30
-        userContainerView.backgroundColor = UIColor(named: KeysColor.lightGrayBackground.rawValue)
+        //userContainerView.backgroundColor = UIColor(named: KeysColor.lightGrayBackground.rawValue)
         
         userContainerView.addSubviewWithoutTranslates(userNameLabel)
         userContainerView.addSubviewWithoutTranslates(userAboutLabel)
         userContainerView.addSubviewWithoutTranslates(acceptButton)
-        userContainerView.addSubviewWithoutTranslates(denyButton)
+        //userContainerView.addSubviewWithoutTranslates(denyButton)
     }
     
     //MARK: - Constraints
@@ -87,10 +87,10 @@ class ChatRequestView: UIView {
             acceptButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             acceptButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20),
             
-            denyButton.heightAnchor.constraint(equalTo: acceptButton.heightAnchor),
-            denyButton.widthAnchor.constraint(equalTo: acceptButton.widthAnchor),
-            denyButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            denyButton.topAnchor.constraint(equalTo: acceptButton.topAnchor)
+//            denyButton.heightAnchor.constraint(equalTo: acceptButton.heightAnchor),
+//            denyButton.widthAnchor.constraint(equalTo: acceptButton.widthAnchor),
+//            denyButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+//            denyButton.topAnchor.constraint(equalTo: acceptButton.topAnchor)
         ])
     }
 }

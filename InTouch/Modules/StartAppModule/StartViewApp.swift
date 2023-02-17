@@ -16,23 +16,23 @@ final class StartViewApp: UIView {
     
     //Labels
     private let mainLabel = UILabel(
-        text: "", font: UIFont(name: KeysFont.logoFont.rawValue, size: 80),
+        text: "", font: .beerMoney80(),
         adjustsFontSizeToFitWidth: true, alignment: .center)
     
     private let communicatePropertyLabel = UILabel(
-        text: "📨  Общайся со своими друзьями", font: .propertyFont(),
+        text: "📨  Общайся со своими друзьями", font: .markerFelt20(),
         adjustsFontSizeToFitWidth: true)
     
     private let sharePhotosLabel = UILabel(
-        text: "🏞️  Делись фото и видео", font: .propertyFont(),
+        text: "🏞️  Делись фото и видео", font: .markerFelt20(),
         adjustsFontSizeToFitWidth: true)
     
     private let shareLocationLabel = UILabel(
-        text: "⛱️  Покажи где ты находишься", font: .propertyFont(),
+        text: "⛱️  Покажи где ты находишься", font: .markerFelt20(),
         adjustsFontSizeToFitWidth: true)
     
     private let stayInTouchLabel = UILabel(
-        text: "🌝  Оставайся всегда на связи", font: .propertyFont(),
+        text: "🌝  Оставайся всегда на связи", font: .markerFelt20(),
         adjustsFontSizeToFitWidth: true)
     
     //Buttons
@@ -47,7 +47,7 @@ final class StartViewApp: UIView {
     
     override init(frame: CGRect) {
         super .init(frame: frame)
-        backgroundColor = .backgoundImage()
+        backgroundColor = UIColor.CustomColor.startBackground.color
         showAnimatedMainLabel()
         configurePropertyStackView()
         configureButtonsStackView()

@@ -3,24 +3,24 @@ import UIKit
 final class MainTabBarViewController: UITabBarController {
     
     //MARK: - Controllers
-    private let peopleViewController = PeopleViewController()
-    private let listViewController = ConversationsViewController()
+//    private let peopleViewController = PeopleViewController()
+//    private let listViewController = ConversationsViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBar.tintColor = UIColor(
-            named: KeysColor.tabBarColor.rawValue)
-        tabBar.backgroundColor = UIColor(
-            named: KeysColor.tabBarBackgroundColor.rawValue)
+//        tabBar.tintColor = UIColor(
+//            named: KeysColor.tabBarColor.rawValue)
+//        tabBar.backgroundColor = UIColor(
+//            named: KeysColor.tabBarBackgroundColor.rawValue)
                 
-        viewControllers = [
-            createNavigationVC(
-                rootVC: peopleViewController, title: "Контакты",
-                imageSystemName: "person.2.fill"),
-            createNavigationVC(
-                rootVC: listViewController, title: "Диалоги",
-                imageSystemName: "message.badge.circle.fill")
-        ]
+//        viewControllers = [
+//            createNavigationVC(
+//                rootVC: peopleViewController, title: "Контакты",
+//                imageSystemName: "person.2.fill"),
+//            createNavigationVC(
+//                rootVC: listViewController, title: "Диалоги",
+//                imageSystemName: "message.badge.circle.fill")
+//        ]
     }
     
     

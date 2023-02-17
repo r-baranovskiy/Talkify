@@ -51,7 +51,7 @@ class ProfileView: UIView {
     
     private func setupProfileContainer() {
         profileContainerView.layer.cornerRadius = 30
-        profileContainerView.backgroundColor = UIColor(named: KeysColor.lightGrayBackground.rawValue)
+        //profileContainerView.backgroundColor = UIColor(named: KeysColor.lightGrayBackground.rawValue)
         
         profileContainerView.addSubviewWithoutTranslates(
             profileNameLabel, profileAboutLabel, profileInfoTextField)

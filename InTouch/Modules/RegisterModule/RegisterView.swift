@@ -32,7 +32,7 @@ final class RegisterView: UIView {
     
     override init(frame: CGRect) {
         super .init(frame: frame)
-        backgroundColor = .backgoundImage()
+        backgroundColor = UIColor.CustomColor.startBackground.color
         configureStackView()
         setTargets()
         setConstraints()
