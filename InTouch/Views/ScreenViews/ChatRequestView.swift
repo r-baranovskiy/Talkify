@@ -25,8 +25,8 @@ class ChatRequestView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubiewWithoutAutoresizing(userImage)
-        addSubiewWithoutAutoresizing(userContainerView)
+        addSubviewWithoutTranslates(userImage)
+        addSubviewWithoutTranslates(userContainerView)
         
         customizeElements()
         setupUserContainer()
@@ -53,10 +53,10 @@ class ChatRequestView: UIView {
         userContainerView.layer.cornerRadius = 30
         userContainerView.backgroundColor = UIColor(named: KeysColor.lightGrayBackground.rawValue)
         
-        userContainerView.addSubiewWithoutAutoresizing(userNameLabel)
-        userContainerView.addSubiewWithoutAutoresizing(userAboutLabel)
-        userContainerView.addSubiewWithoutAutoresizing(acceptButton)
-        userContainerView.addSubiewWithoutAutoresizing(denyButton)
+        userContainerView.addSubviewWithoutTranslates(userNameLabel)
+        userContainerView.addSubviewWithoutTranslates(userAboutLabel)
+        userContainerView.addSubviewWithoutTranslates(acceptButton)
+        userContainerView.addSubviewWithoutTranslates(denyButton)
     }
     
     //MARK: - Constraints

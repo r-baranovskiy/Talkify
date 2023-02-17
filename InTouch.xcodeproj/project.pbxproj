@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		800B5CD92926120800D9AECF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800B5CD82926120800D9AECF /* AppDelegate.swift */; };
 		800B5CDB2926120800D9AECF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800B5CDA2926120800D9AECF /* SceneDelegate.swift */; };
-		800B5CDD2926120800D9AECF /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800B5CDC2926120800D9AECF /* StartViewController.swift */; };
+		800B5CDD2926120800D9AECF /* StartViewAppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800B5CDC2926120800D9AECF /* StartViewAppController.swift */; };
 		800B5CE22926120B00D9AECF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 800B5CE12926120B00D9AECF /* Assets.xcassets */; };
 		800B5CE52926120B00D9AECF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 800B5CE32926120B00D9AECF /* LaunchScreen.storyboard */; };
 		800CA6CB2949B2CC000096C4 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800CA6CA2949B2CC000096C4 /* Bundle-Decodable.swift */; };
@@ -31,7 +31,7 @@
 		80A41035292CABD000C527CB /* UIAlertController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A41034292CABD000C527CB /* UIAlertController + Extensions.swift */; };
 		80A6B01129263AF300A25042 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A6B01029263AF300A25042 /* RegisterViewController.swift */; };
 		80A6B01529263B1700A25042 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A6B01429263B1700A25042 /* PeopleViewController.swift */; };
-		80A6B021292652B700A25042 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A6B020292652B700A25042 /* StartView.swift */; };
+		80A6B021292652B700A25042 /* StartViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A6B020292652B700A25042 /* StartViewApp.swift */; };
 		80A6B023292653A700A25042 /* Enums + Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A6B022292653A700A25042 /* Enums + Appearance.swift */; };
 		80A6B0252926561800A25042 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A6B0242926561800A25042 /* RegisterView.swift */; };
 		80A6B02A2926594000A25042 /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A6B0292926594000A25042 /* UIView + Extension.swift */; };
@@ -63,7 +63,7 @@
 /* Begin PBXFileReference section */
 		800B5CD82926120800D9AECF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		800B5CDA2926120800D9AECF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		800B5CDC2926120800D9AECF /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		800B5CDC2926120800D9AECF /* StartViewAppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewAppController.swift; sourceTree = "<group>"; };
 		800B5CE12926120B00D9AECF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		800B5CE42926120B00D9AECF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		800B5CE62926120B00D9AECF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,7 +84,7 @@
 		80A41034292CABD000C527CB /* UIAlertController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController + Extensions.swift"; sourceTree = "<group>"; };
 		80A6B01029263AF300A25042 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		80A6B01429263B1700A25042 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
-		80A6B020292652B700A25042 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		80A6B020292652B700A25042 /* StartViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewApp.swift; sourceTree = "<group>"; };
 		80A6B022292653A700A25042 /* Enums + Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Enums + Appearance.swift"; sourceTree = "<group>"; };
 		80A6B0242926561800A25042 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		80A6B0292926594000A25042 /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
@@ -144,6 +144,7 @@
 				80C2192329263610004ED3D6 /* App */,
 				80109D232955083C003D5544 /* Firebase */,
 				80A6B01E29263C0100A25042 /* Models */,
+				80E42075299FF0B700C72CE8 /* Modules */,
 				80C219262926364F004ED3D6 /* Controllers */,
 				80C2192529263649004ED3D6 /* Views */,
 				80A6B026292658F900A25042 /* Enums */,
@@ -165,9 +166,7 @@
 		80A6B01329263B0600A25042 /* Login&Register */ = {
 			isa = PBXGroup;
 			children = (
-				800B5CDC2926120800D9AECF /* StartViewController.swift */,
 				80A6B01029263AF300A25042 /* RegisterViewController.swift */,
-				80E076D6292752A300499ECF /* LoginViewController.swift */,
 				80B0AAD92946E2F70082D6D9 /* SettingsProfileViewController.swift */,
 			);
 			path = "Login&Register";
@@ -246,9 +245,7 @@
 		80C182AA294BCDF600C29BF5 /* ScreenViews */ = {
 			isa = PBXGroup;
 			children = (
-				80A6B020292652B700A25042 /* StartView.swift */,
 				80A6B0242926561800A25042 /* RegisterView.swift */,
-				80E076D829278BED00499ECF /* LoginView.swift */,
 				80B0AAD72946E2E00082D6D9 /* SettingsProfileView.swift */,
 				8049CFA9294D2C5600F0E1C5 /* ProfileView.swift */,
 				80B8BD78294E4248007078D1 /* ChatRequestView.swift */,
@@ -317,6 +314,65 @@
 				80E7740D294DD057002F11AA /* SmileTextField.swift */,
 			);
 			path = UIElements;
+			sourceTree = "<group>";
+		};
+		80E42075299FF0B700C72CE8 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				80E42076299FF0D000C72CE8 /* StartAppModule */,
+				80E42079299FF13200C72CE8 /* LoginModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		80E42076299FF0D000C72CE8 /* StartAppModule */ = {
+			isa = PBXGroup;
+			children = (
+				80E42077299FF0DF00C72CE8 /* Views */,
+				80E42078299FF0EC00C72CE8 /* Controllers */,
+			);
+			path = StartAppModule;
+			sourceTree = "<group>";
+		};
+		80E42077299FF0DF00C72CE8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				80A6B020292652B700A25042 /* StartViewApp.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		80E42078299FF0EC00C72CE8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				800B5CDC2926120800D9AECF /* StartViewAppController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		80E42079299FF13200C72CE8 /* LoginModule */ = {
+			isa = PBXGroup;
+			children = (
+				80E4207B299FF14600C72CE8 /* Views */,
+				80E4207A299FF13F00C72CE8 /* Controllers */,
+			);
+			path = LoginModule;
+			sourceTree = "<group>";
+		};
+		80E4207A299FF13F00C72CE8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				80E076D6292752A300499ECF /* LoginViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		80E4207B299FF14600C72CE8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				80E076D829278BED00499ECF /* LoginView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		80E77406294DBAA6002F11AA /* ScreenForReadmi */ = {
@@ -412,7 +468,7 @@
 				80CD7B5F29451E6300CEFA91 /* UIFont + Extension.swift in Sources */,
 				80C182A4294BB9CD00C29BF5 /* WaitingChatCell.swift in Sources */,
 				8049CFA2294C285100F0E1C5 /* Message.swift in Sources */,
-				800B5CDD2926120800D9AECF /* StartViewController.swift in Sources */,
+				800B5CDD2926120800D9AECF /* StartViewAppController.swift in Sources */,
 				80A6B01529263B1700A25042 /* PeopleViewController.swift in Sources */,
 				80A41035292CABD000C527CB /* UIAlertController + Extensions.swift in Sources */,
 				80CA4B8B2955235700D153CE /* Validate.swift in Sources */,
@@ -426,7 +482,7 @@
 				800B5CDB2926120800D9AECF /* SceneDelegate.swift in Sources */,
 				80C182AD294BCE2200C29BF5 /* HeaderSection.swift in Sources */,
 				80109D252955085E003D5544 /* AuthService.swift in Sources */,
-				80A6B021292652B700A25042 /* StartView.swift in Sources */,
+				80A6B021292652B700A25042 /* StartViewApp.swift in Sources */,
 				80E076D929278BED00499ECF /* LoginView.swift in Sources */,
 				80B8BD79294E4248007078D1 /* ChatRequestView.swift in Sources */,
 				80E7740E294DD057002F11AA /* SmileTextField.swift in Sources */,

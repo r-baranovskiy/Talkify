@@ -29,7 +29,7 @@ class CustomTextField: UITextField {
         let bottomLineView = UIView()
         bottomLineView.backgroundColor = .black
         
-        textField.addSubiewWithoutAutoresizing(bottomLineView)
+        textField.addSubviewWithoutTranslates(bottomLineView)
         
         NSLayoutConstraint.activate([
             bottomLineView.bottomAnchor.constraint(equalTo: textField.bottomAnchor),

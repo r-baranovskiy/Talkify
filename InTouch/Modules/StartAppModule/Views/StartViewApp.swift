@@ -1,43 +1,43 @@
 import UIKit
 
-protocol StartViewDelegate: AnyObject {
+protocol StartViewAppDelegate: AnyObject {
     func loginButtonDidTap()
     func registerButtonDidTap()
 }
 
 /// This view class that displays in StartViewController
-final class StartView: UIView {
+final class StartViewApp: UIView {
     
-    //MARK: - Constants
+    //MARK: - UI Constants
     
-    weak var delegate: StartViewDelegate?
+    weak var delegate: StartViewAppDelegate?
     
     private var timeIntervalAnimate = 0.5
     
     //Labels
     private let mainLabel = UILabel(
         text: "", font: UIFont(name: KeysFont.logoFont.rawValue, size: 80),
-        textColor: .label, adjustsFontSizeToFitWidth: true, alignment: .center)
+        adjustsFontSizeToFitWidth: true, alignment: .center)
     
     private let communicatePropertyLabel = UILabel(
         text: "📨  Общайся со своими друзьями", font: .propertyFont(),
-        textColor: .label, adjustsFontSizeToFitWidth: true)
+        adjustsFontSizeToFitWidth: true)
     
     private let sharePhotosLabel = UILabel(
         text: "🏞️  Делись фото и видео", font: .propertyFont(),
-        textColor: .label, adjustsFontSizeToFitWidth: true)
+        adjustsFontSizeToFitWidth: true)
     
     private let shareLocationLabel = UILabel(
         text: "⛱️  Покажи где ты находишься", font: .propertyFont(),
-        textColor: .label, adjustsFontSizeToFitWidth: true)
+        adjustsFontSizeToFitWidth: true)
     
     private let stayInTouchLabel = UILabel(
         text: "🌝  Оставайся всегда на связи", font: .propertyFont(),
-        textColor: .label, adjustsFontSizeToFitWidth: true)
+        adjustsFontSizeToFitWidth: true)
     
     //Buttons
-    let loginButton = CustomButton(text: "Войти", isShadow: true)
-    let registerButton = CustomButton(text: "Регистрация", isShadow: true)
+    private let loginButton = CustomButton(text: "Войти", isShadow: true)
+    private let registerButton = CustomButton(text: "Регистрация", isShadow: true)
     
     //Containers
     private var propertyStackView = UIStackView()
@@ -80,9 +80,9 @@ final class StartView: UIView {
     //MARK: - Appearance
     
     private func addSubviews() {
-        addSubiewWithoutAutoresizing(mainLabel)
-        addSubiewWithoutAutoresizing(propertyStackView)
-        addSubiewWithoutAutoresizing(buttonsStackView)
+        addSubviewWithoutTranslates(mainLabel)
+        addSubviewWithoutTranslates(propertyStackView)
+        addSubviewWithoutTranslates(buttonsStackView)
     }
     
     private func showAnimatedMainLabel() {

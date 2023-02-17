@@ -18,7 +18,7 @@ class UserChatCell: UICollectionViewCell, SelfConfiguringCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubiewWithoutAutoresizing(cellContainer)
+        addSubviewWithoutTranslates(cellContainer)
         setupCellContainer()
         backgroundColor = .lightGray
         layer.cornerRadius = 3
@@ -38,8 +38,8 @@ class UserChatCell: UICollectionViewCell, SelfConfiguringCell {
     }
     
     private func setupCellContainer() {
-        cellContainer.addSubiewWithoutAutoresizing(userImageView)
-        cellContainer.addSubiewWithoutAutoresizing(userName)
+        cellContainer.addSubviewWithoutTranslates(userImageView)
+        cellContainer.addSubviewWithoutTranslates(userName)
         
         NSLayoutConstraint.activate([
             cellContainer.topAnchor.constraint(equalTo: topAnchor),

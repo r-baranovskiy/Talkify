@@ -38,9 +38,7 @@ class RegisterView: UIView {
     //MARK: - Configure
     
     private func addSubviews() {
-        addSubiewWithoutAutoresizing(fieldsStackView)
-        addSubiewWithoutAutoresizing(registerButton)
-        addSubiewWithoutAutoresizing(backButton)
+        addSubviewWithoutTranslates(fieldsStackView, registerButton, backButton)
     }
     
     private func configureStackView() {

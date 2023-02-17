@@ -2,12 +2,9 @@ import UIKit
 
 extension UILabel {
     
-    convenience init(text: String,
-                     font: UIFont?,
-                     textColor: UIColor,
-                     adjustsFontSizeToFitWidth: Bool,
-                     minimumScale: CGFloat = 0.3,
-                     alignment: NSTextAlignment = .left) {
+    convenience init(text: String, font: UIFont?, textColor: UIColor = .label,
+                     adjustsFontSizeToFitWidth: Bool = false,
+                     minimumScale: CGFloat = 0.3, alignment: NSTextAlignment = .left) {
         self.init()
         self.text = text
         self.textColor = textColor
@@ -19,5 +16,4 @@ extension UILabel {
             self.minimumScaleFactor = minimumScale
         }
     }
-    
 }

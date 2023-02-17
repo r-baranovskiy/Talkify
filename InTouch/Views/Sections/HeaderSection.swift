@@ -8,7 +8,7 @@ class HeaderSection: UICollectionReusableView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubiewWithoutAutoresizing(headerTitle)
+        addSubviewWithoutTranslates(headerTitle)
         setConstraints()
     }
     

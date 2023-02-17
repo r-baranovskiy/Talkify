@@ -89,13 +89,9 @@ class SettingsProfileView: UIView {
     }
     
     private func addSubviews() {
-        addSubiewWithoutAutoresizing(welcomeLabel)
-        addSubiewWithoutAutoresizing(backButton)
-        addSubiewWithoutAutoresizing(userPhotoView)
-        addSubiewWithoutAutoresizing(nameStackView)
-        addSubiewWithoutAutoresizing(aboutInfoStackView)
-        addSubiewWithoutAutoresizing(sexStackView)
-        addSubiewWithoutAutoresizing(goToChatButton)
+        addSubviewWithoutTranslates(
+            welcomeLabel, backButton, userPhotoView, nameStackView,
+            aboutInfoStackView, sexStackView, goToChatButton)
     }
     
     //MARK: - Constraints

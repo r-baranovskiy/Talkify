@@ -38,7 +38,7 @@ class ActiveChatCell: UICollectionViewCell, SelfConfiguringCell {
         self.clipsToBounds = true
         self.layer.cornerRadius = 4
         configureChatStackView()
-        addSubiewWithoutAutoresizing(chatStackView)
+        addSubviewWithoutTranslates(chatStackView)
         setConstraints()
     }
     

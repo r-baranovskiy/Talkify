@@ -1,23 +1,23 @@
 import UIKit
 
-class StartViewController: UIViewController {
+class StartViewAppController: UIViewController {
     
-    private let startView = StartView()
+    private let startViewApp = StartViewApp()
     
     //MARK: - Lifecycles
     
     override func loadView() {
         super.loadView()
-        view = startView
+        view = startViewApp
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        startView.delegate = self
+        startViewApp.delegate = self
     }
 }
 
-extension StartViewController: StartViewDelegate {
+extension StartViewAppController: StartViewAppDelegate {
     func loginButtonDidTap() {
         let loginVC = LoginViewController()
         loginVC.modalTransitionStyle = .crossDissolve

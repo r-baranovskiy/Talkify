@@ -1,9 +1,14 @@
 import UIKit
 
 extension UIView {
-    func addSubiewWithoutAutoresizing(_ view: UIView) {
+    func addSubviewWithoutTranslates(_ view: UIView) {
         self.addSubview(view)
         view.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    func addSubviewWithoutTranslates(_ views: UIView...) {
+        views.forEach({ $0.translatesAutoresizingMaskIntoConstraints = false
+            self.addSubview($0) })
     }
     
     func applyGradients(cornerRadius: CGFloat) {

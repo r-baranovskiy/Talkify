@@ -47,7 +47,7 @@ class CustomButton: UIButton {
         let googleLogo = UIImageView(image: UIImage(named: "googleLogo"))
         googleLogo.contentMode = .scaleToFill
         googleButton.alpha = 1
-        googleButton.addSubiewWithoutAutoresizing(googleLogo)
+        googleButton.addSubviewWithoutTranslates(googleLogo)
         
         NSLayoutConstraint.activate([
             googleLogo.heightAnchor.constraint(equalTo: googleButton.heightAnchor, multiplier: 0.5),

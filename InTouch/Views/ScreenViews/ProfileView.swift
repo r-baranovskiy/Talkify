@@ -30,8 +30,8 @@ class ProfileView: UIView {
         super.init(frame: frame)
         backgroundColor = .white
         sendButton = profileInfoTextField.sendButton
-        addSubiewWithoutAutoresizing(profileImage)
-        addSubiewWithoutAutoresizing(profileContainerView)
+        addSubviewWithoutTranslates(profileImage)
+        addSubviewWithoutTranslates(profileContainerView)
         
         customizeElements()
         setupProfileContainer()
@@ -53,9 +53,8 @@ class ProfileView: UIView {
         profileContainerView.layer.cornerRadius = 30
         profileContainerView.backgroundColor = UIColor(named: KeysColor.lightGrayBackground.rawValue)
         
-        profileContainerView.addSubiewWithoutAutoresizing(profileNameLabel)
-        profileContainerView.addSubiewWithoutAutoresizing(profileAboutLabel)
-        profileContainerView.addSubiewWithoutAutoresizing(profileInfoTextField)
+        profileContainerView.addSubviewWithoutTranslates(
+            profileNameLabel, profileAboutLabel, profileInfoTextField)
     }
     
     //MARK: - Constraints

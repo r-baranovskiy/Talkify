@@ -12,7 +12,7 @@ class WaitingChatCell: UICollectionViewCell, SelfConfiguringCell {
         profileImageView.clipsToBounds = true
         profileImageView.contentMode = .scaleAspectFill
         
-        addSubiewWithoutAutoresizing(profileImageView)
+        addSubviewWithoutTranslates(profileImageView)
         setConstraints()
     }
     
