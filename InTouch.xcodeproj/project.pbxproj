@@ -166,7 +166,6 @@
 		80A6B01329263B0600A25042 /* Login&Register */ = {
 			isa = PBXGroup;
 			children = (
-				80B0AAD92946E2F70082D6D9 /* SettingsProfileViewController.swift */,
 			);
 			path = "Login&Register";
 			sourceTree = "<group>";
@@ -244,7 +243,6 @@
 		80C182AA294BCDF600C29BF5 /* ScreenViews */ = {
 			isa = PBXGroup;
 			children = (
-				80B0AAD72946E2E00082D6D9 /* SettingsProfileView.swift */,
 				8049CFA9294D2C5600F0E1C5 /* ProfileView.swift */,
 				80B8BD78294E4248007078D1 /* ChatRequestView.swift */,
 			);
@@ -320,6 +318,7 @@
 				80E42076299FF0D000C72CE8 /* StartAppModule */,
 				80E42079299FF13200C72CE8 /* LoginModule */,
 				80E4207C299FFF9700C72CE8 /* RegisterModule */,
+				80E4207E29A007E200C72CE8 /* SettingsProfileModule */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -349,6 +348,15 @@
 				80A6B01029263AF300A25042 /* RegisterViewController.swift */,
 			);
 			path = RegisterModule;
+			sourceTree = "<group>";
+		};
+		80E4207E29A007E200C72CE8 /* SettingsProfileModule */ = {
+			isa = PBXGroup;
+			children = (
+				80B0AAD72946E2E00082D6D9 /* SettingsProfileView.swift */,
+				80B0AAD92946E2F70082D6D9 /* SettingsProfileViewController.swift */,
+			);
+			path = SettingsProfileModule;
 			sourceTree = "<group>";
 		};
 		80E77406294DBAA6002F11AA /* ScreenForReadmi */ = {
