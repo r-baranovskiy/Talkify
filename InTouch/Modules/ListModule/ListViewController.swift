@@ -2,29 +2,48 @@ import UIKit
 
 class ListViewController: UIViewController  {
     
-    private lazy var listCollectionView: UICollectionView = {
+    let activeChats: [Chat] = [
+        Chat(username: "Ruslan", userImage: UIImage(named: "img1")!,
+             lastMessge: "How are you?"),
+        Chat(username: "Nastya", userImage: UIImage(named: "img2")!,
+             lastMessge: "Where are you?"),
+        Chat(username: "Olya", userImage: UIImage(named: "img3")!,
+             lastMessge: "What are you doing?"),
+        Chat(username: "Vlad", userImage: UIImage(named: "img3")!,
+             lastMessge: "When will we meet?")
+    ]
+    
+    lazy var listCollectionView: UICollectionView = {
         let layout = createCompositionalLayout()
-        
         let collectionView = UICollectionView(
             frame: view.bounds,
             collectionViewLayout: layout)
         collectionView.backgroundColor = UIColor.CustomColor.collectionViewBackground.color
         return collectionView
     }()
-
+    
+    lazy var dataSource: UICollectionViewDiffableDataSource<ListSection, Chat> = {
+        let dataSource = createDataSource()
+        return dataSource
+    }()
+    
+    // MARK: - Lifecycles
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        configureListCollectionView()
-        configureSearchBar()
         view.addSubview(listCollectionView)
+        configureListCollectionView()
+        reloadData()
+        configureSearchBar()
     }
+    
+    // MARK: - Appearance
     
     private func configureListCollectionView() {
         listCollectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         listCollectionView.register(
             UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-        listCollectionView.dataSource = self
     }
     
     private func configureSearchBar() {

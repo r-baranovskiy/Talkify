@@ -1,15 +1,15 @@
 import UIKit
 
 enum ListSection: Int, CaseIterable {
-    case waitingChat
     case activeChats
+    case waitingChat
     
     func description() -> String {
         switch self {
-        case .waitingChat:
-            return "Ожидают подтверждения"
         case .activeChats:
             return "Ваши контакты"
+        case .waitingChat:
+            return "Ожидают подтверждения"
         }
     }
 }
