@@ -55,7 +55,7 @@ final class StartAppView: UIView {
     
     override init(frame: CGRect) {
         super .init(frame: frame)
-        backgroundColor = UIColor.CustomColor.startBackground.color
+        backgroundColor = UIColor.CustomColor.mainBackground.color
         showAnimatedMainLabel()
         configurePropertyStackView()
         configureButtonsStackView()

@@ -19,6 +19,10 @@ final class StartAppViewController: UIViewController {
 }
 
 extension StartAppViewController: StartAppViewDelegate {
+    func googleButtonDidTap() {
+        print("Google!!!")
+    }
+    
     func loginButtonDidTap() {
         let loginVC = LoginViewController()
         loginVC.modalTransitionStyle = .crossDissolve

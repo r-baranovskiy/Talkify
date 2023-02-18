@@ -49,6 +49,9 @@
 		80E076D7292752A300499ECF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E076D6292752A300499ECF /* LoginViewController.swift */; };
 		80E076D929278BED00499ECF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E076D829278BED00499ECF /* LoginView.swift */; };
 		80E4208429A0259D00C72CE8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E4208329A0259D00C72CE8 /* Constants.swift */; };
+		80E4208929A044B200C72CE8 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E4208829A044B200C72CE8 /* ListViewController.swift */; };
+		80E4208C29A0460600C72CE8 /* ListViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E4208B29A0460600C72CE8 /* ListViewController + Extension.swift */; };
+		80E4208F29A048B900C72CE8 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E4208E29A048B900C72CE8 /* PeopleViewController.swift */; };
 		80E7740C294DC201002F11AA /* ScreenLogin.png in Resources */ = {isa = PBXBuildFile; fileRef = 80E7740B294DC201002F11AA /* ScreenLogin.png */; };
 		80E7740E294DD057002F11AA /* SmileTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E7740D294DD057002F11AA /* SmileTextField.swift */; };
 		80F83A78299FDD7B003518FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80F83A77299FDD7B003518FE /* GoogleService-Info.plist */; };
@@ -96,6 +99,9 @@
 		80E076D6292752A300499ECF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		80E076D829278BED00499ECF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		80E4208329A0259D00C72CE8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		80E4208829A044B200C72CE8 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		80E4208B29A0460600C72CE8 /* ListViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewController + Extension.swift"; sourceTree = "<group>"; };
+		80E4208E29A048B900C72CE8 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		80E7740B294DC201002F11AA /* ScreenLogin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenLogin.png; sourceTree = "<group>"; };
 		80E7740D294DD057002F11AA /* SmileTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmileTextField.swift; sourceTree = "<group>"; };
 		80F83A77299FDD7B003518FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -257,6 +263,8 @@
 				80E4207C299FFF9700C72CE8 /* RegisterModule */,
 				80E4207E29A007E200C72CE8 /* SettingsProfileModule */,
 				80E4207F29A0155200C72CE8 /* MainTabBarModule */,
+				80E4208729A0447C00C72CE8 /* ListModule */,
+				80E4208D29A0489C00C72CE8 /* PeopleModule */,
 				80E4208129A0166B00C72CE8 /* ProfileModule */,
 				80E4208229A0169C00C72CE8 /* ChatRequestModule */,
 			);
@@ -323,6 +331,23 @@
 				80B8BD76294E4212007078D1 /* ChatRequestViewController.swift */,
 			);
 			path = ChatRequestModule;
+			sourceTree = "<group>";
+		};
+		80E4208729A0447C00C72CE8 /* ListModule */ = {
+			isa = PBXGroup;
+			children = (
+				80E4208829A044B200C72CE8 /* ListViewController.swift */,
+				80E4208B29A0460600C72CE8 /* ListViewController + Extension.swift */,
+			);
+			path = ListModule;
+			sourceTree = "<group>";
+		};
+		80E4208D29A0489C00C72CE8 /* PeopleModule */ = {
+			isa = PBXGroup;
+			children = (
+				80E4208E29A048B900C72CE8 /* PeopleViewController.swift */,
+			);
+			path = PeopleModule;
 			sourceTree = "<group>";
 		};
 		80E77406294DBAA6002F11AA /* ScreenForReadmi */ = {
@@ -415,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80E4208929A044B200C72CE8 /* ListViewController.swift in Sources */,
 				80CD7B5F29451E6300CEFA91 /* UIFont + Extension.swift in Sources */,
 				8049CFA2294C285100F0E1C5 /* Message.swift in Sources */,
 				800B5CDD2926120800D9AECF /* StartAppViewController.swift in Sources */,
@@ -424,6 +450,7 @@
 				807072EF2947E77700B9A3EB /* MainTabBarViewController.swift in Sources */,
 				801B933C29462CAB00F8EE36 /* UIViewController + Extension.swift in Sources */,
 				800B5CD92926120800D9AECF /* AppDelegate.swift in Sources */,
+				80E4208C29A0460600C72CE8 /* ListViewController + Extension.swift in Sources */,
 				80C182A9294BBF6500C29BF5 /* Enum + CollectionView.swift in Sources */,
 				80C182A6294BBBD400C29BF5 /* ConfiguringCell Protocol.swift in Sources */,
 				800B5CDB2926120800D9AECF /* SceneDelegate.swift in Sources */,
@@ -445,6 +472,7 @@
 				80A6B0252926561800A25042 /* RegisterView.swift in Sources */,
 				8049CFAA294D2C5600F0E1C5 /* ProfileView.swift in Sources */,
 				80CD7B662945310500CEFA91 /* CustomButtons.swift in Sources */,
+				80E4208F29A048B900C72CE8 /* PeopleViewController.swift in Sources */,
 				80A6B01129263AF300A25042 /* RegisterViewController.swift in Sources */,
 				80B0AAD82946E2E00082D6D9 /* SettingsProfileView.swift in Sources */,
 				80C182A2294B3FD600C29BF5 /* GradientView.swift in Sources */,

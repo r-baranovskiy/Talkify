@@ -38,7 +38,7 @@ final class LoginView: UIView {
     
     override init(frame: CGRect) {
         super .init(frame: frame)
-        backgroundColor = UIColor.CustomColor.startBackground.color
+        backgroundColor = UIColor.CustomColor.mainBackground.color
         setTargets()
         setConstraints()
     }

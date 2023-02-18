@@ -47,7 +47,7 @@ final class SettingsProfileView: UIView {
     
     override init(frame: CGRect) {
         super .init(frame: frame)
-        backgroundColor = UIColor.CustomColor.startBackground.color
+        backgroundColor = UIColor.CustomColor.mainBackground.color
         sexSegmentedControl.selectedSegmentIndex = 0
         configureStackViews()
         setTargets()
