@@ -1,6 +1,6 @@
 import UIKit
 
-extension ListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension ListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
         return 5

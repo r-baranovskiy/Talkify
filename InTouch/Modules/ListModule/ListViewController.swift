@@ -3,9 +3,11 @@ import UIKit
 class ListViewController: UIViewController  {
     
     private lazy var listCollectionView: UICollectionView = {
+        let layout = createCompositionalLayout()
+        
         let collectionView = UICollectionView(
             frame: view.bounds,
-            collectionViewLayout: UICollectionViewFlowLayout())
+            collectionViewLayout: layout)
         collectionView.backgroundColor = UIColor.CustomColor.collectionViewBackground.color
         return collectionView
     }()
@@ -22,7 +24,6 @@ class ListViewController: UIViewController  {
         listCollectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         listCollectionView.register(
             UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-        listCollectionView.delegate = self
         listCollectionView.dataSource = self
     }
     
