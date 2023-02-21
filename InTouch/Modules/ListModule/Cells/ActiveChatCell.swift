@@ -4,10 +4,15 @@ final class ActiveChatCell: UICollectionViewCell, ConfiguringCell {
     static let reuseID: String = "ActiveChatCell"
     
     private let friendImageView = UIImageView()
-    private let friendNameLabel = UILabel(text: "Username", font: .laoSangamMN20())
-    private let lastMessageLabel = UILabel(text: "Hoa are you?", font: .laoSangamMN18())
+    private let friendNameLabel = UILabel(
+        text: "Username", font: .laoSangamMN20())
+    private let lastMessageLabel = UILabel(
+        text: "Hoa are you?", font: .laoSangamMN18())
     
-    private let gradientView = UIView()
+    private let gradientView = GradientView(
+        from: .top, to: .bottom,
+        startColor: UIColor.CustomColor.startGradientCell.color,
+        endColor: UIColor.CustomColor.endGradientCell.color)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,7 +43,8 @@ final class ActiveChatCell: UICollectionViewCell, ConfiguringCell {
             friendImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
             friendImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
             friendImageView.heightAnchor.constraint(equalTo: heightAnchor),
-            friendImageView.widthAnchor.constraint(equalTo: friendImageView.heightAnchor)
+            friendImageView.widthAnchor.constraint(
+                equalTo: friendImageView.heightAnchor)
         ])
         
         NSLayoutConstraint.activate([
@@ -48,9 +54,11 @@ final class ActiveChatCell: UICollectionViewCell, ConfiguringCell {
         ])
         
         NSLayoutConstraint.activate([
-            friendNameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 12),
+            friendNameLabel.topAnchor.constraint(
+                equalTo: topAnchor, constant: 12),
             friendNameLabel.leadingAnchor.constraint(equalTo: friendImageView.trailingAnchor, constant: 16),
-            friendNameLabel.trailingAnchor.constraint(equalTo: gradientView.leadingAnchor, constant: -16)
+            friendNameLabel.trailingAnchor.constraint(
+                equalTo: gradientView.leadingAnchor, constant: -16)
         ])
         
         NSLayoutConstraint.activate([

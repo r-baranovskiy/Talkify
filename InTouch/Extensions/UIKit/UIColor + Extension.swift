@@ -6,6 +6,8 @@ extension UIColor {
         case navigationButtonBackground
         case tabBarBackground
         case collectionViewBackground
+        case startGradientCell
+        case endGradientCell
         
         var color: UIColor {
             switch self {
@@ -21,6 +23,10 @@ extension UIColor {
                 return UIColor(named: "tabBarColor") ?? .secondarySystemGroupedBackground
             case .collectionViewBackground:
                 return UIColor(named: "collectionViewBackground") ?? .systemBackground
+            case .startGradientCell:
+                return UIColor(named: "cellGradientStart") ?? .red
+            case .endGradientCell:
+                return UIColor(named: "cellGradientEnd") ?? .black
             }
         }
     }
