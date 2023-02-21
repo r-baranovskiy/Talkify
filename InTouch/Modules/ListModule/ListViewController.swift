@@ -36,10 +36,16 @@ class ListViewController: UIViewController  {
     
     private func configureListCollectionView() {
         listCollectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
         listCollectionView.register(
             WaitingChatCell.self, forCellWithReuseIdentifier: WaitingChatCell.reuseID)
         listCollectionView.register(
             ActiveChatCell.self, forCellWithReuseIdentifier: ActiveChatCell.reuseID)
+        
+        listCollectionView.register(
+            SectionHeader.self,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: SectionHeader.identifier)
     }
     
     private func configureSearchBar() {
@@ -90,6 +96,22 @@ extension ListViewController {
                         cellType: WaitingChatCell.self, with: chat, for: indexPath)
                 }
             }
+        dataSource.supplementaryViewProvider = { collectionView, kind, indexPath in
+            guard let sectionHeader = collectionView
+                .dequeueReusableSupplementaryView(
+                    ofKind: kind,
+                    withReuseIdentifier: SectionHeader.identifier,
+                    for: indexPath) as? SectionHeader else {
+                fatalError("Cannot create header")
+            }
+            guard let section = ListSection(rawValue: indexPath.section) else {
+                fatalError("Unknown section kind")
+            }
+            sectionHeader.configure(
+                title: section.description(), font: .laoSangamMN20(),
+                textColor: .lightGray)
+            return sectionHeader
+        }
         return dataSource
     }
     
@@ -119,6 +141,9 @@ extension ListViewController {
                 return self.createWaitingChatSection()
             }
         }
+        let config = UICollectionViewCompositionalLayoutConfiguration()
+        config.interSectionSpacing = 20
+        layout.configuration = config
         return layout
     }
     
@@ -139,6 +164,9 @@ extension ListViewController {
         section.contentInsets = NSDirectionalEdgeInsets(
             top: 16, leading: 20,
             bottom: 0, trailing: 20)
+        
+        let sectionHeader = createSectionHeader()
+        section.boundarySupplementaryItems = [sectionHeader]
         
         return section
     }
@@ -163,7 +191,22 @@ extension ListViewController {
         section.contentInsets = NSDirectionalEdgeInsets(
             top: 16, leading: 20,
             bottom: 0, trailing: 20)
+        
+        let sectionHeader = createSectionHeader()
+        section.boundarySupplementaryItems = [sectionHeader]
+        
         return section
+    }
+    
+    private func createSectionHeader() -> NSCollectionLayoutBoundarySupplementaryItem {
+        let sectionHeaderSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1), heightDimension: .estimated(1))
+        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: sectionHeaderSize,
+            elementKind: UICollectionView.elementKindSectionHeader,
+            alignment: .top)
+        
+        return sectionHeader
     }
 }
 
