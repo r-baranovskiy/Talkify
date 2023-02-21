@@ -1,17 +1,17 @@
 import UIKit
 
 enum ListSection: Int, CaseIterable {
-    case activeChats
     case waitingChat
+    case activeChat
     
-    func description() -> String {
-        switch self {
-        case .activeChats:
-            return "Ваши контакты"
-        case .waitingChat:
-            return "Ожидают подтверждения"
-        }
-    }
+//    func description() -> String {
+//        switch self {
+//        case .activeChat:
+//            return "Ваши контакты"
+//        case .waitingChat:
+//            return "Ожидают подтверждения"
+//        }
+//    }
 }
 
 enum PeopleSection: Int, CaseIterable {

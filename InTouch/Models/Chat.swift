@@ -1,10 +1,10 @@
-import UIKit
+import Foundation
 
-struct Chat: Hashable {
+struct Chat: Hashable, Decodable {
     let username: String
-    let userImage: UIImage
-    let lastMessge: String
-    let id = UUID()
+    let userImageString: String
+    let lastMessage: String
+    let id: Int
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
