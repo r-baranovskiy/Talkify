@@ -20,14 +20,14 @@ extension UIViewController {
 
 extension UIViewController {
     
-    func configure<T: SelfConfiguringCell, U: Hashable>(
-        collectionView: UICollectionView, cellType: T.Type,
-        with value: U, for indexPath: IndexPath) -> T {
-        guard let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: cellType.reuseID, for: indexPath) as? T else {
-            fatalError("Unable to dequare \(cellType.reuseID)")
-        }
-        cell.configure(with: value )
-        return cell
-    }
+//    func configure<T: SelfConfiguringCell, U: Hashable>(
+//        collectionView: UICollectionView, cellType: T.Type,
+//        with value: U, for indexPath: IndexPath) -> T {
+//        guard let cell = collectionView.dequeueReusableCell(
+//            withReuseIdentifier: cellType.reuseID, for: indexPath) as? T else {
+//            fatalError("Unable to dequare \(cellType.reuseID)")
+//        }
+//        cell.configure(with: value )
+//        return cell
+//    }
 }

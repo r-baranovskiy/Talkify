@@ -37,7 +37,7 @@ class ListViewController: UIViewController  {
         listCollectionView.register(
             UICollectionViewCell.self, forCellWithReuseIdentifier: "cell2")
         listCollectionView.register(
-            UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+            ActiveChatCell.self, forCellWithReuseIdentifier: ActiveChatCell.reuseID)
     }
     
     private func configureSearchBar() {
@@ -61,7 +61,18 @@ extension ListViewController: UISearchBarDelegate {
 // MARK: - UICollectionViewDiffableDataSource
 
 extension ListViewController {
-    func createDataSource() -> UICollectionViewDiffableDataSource<ListSection, Chat> {
+    
+    private func configure<T: ConfiguringCell>(cellType: T.Type, with value: Chat,
+                                               for indexPath: IndexPath) -> T {
+        guard let cell = listCollectionView.dequeueReusableCell(
+            withReuseIdentifier: cellType.reuseID, for: indexPath) as? T else {
+            fatalError("Unable to deque the cell")
+        }
+        cell.configure(with: value)
+        return cell
+    }
+    
+    private func createDataSource() -> UICollectionViewDiffableDataSource<ListSection, Chat> {
         let dataSource = UICollectionViewDiffableDataSource<ListSection, Chat>(
             collectionView: listCollectionView) { (
                 collectionView, indexPath, chat) -> UICollectionViewCell? in
@@ -70,10 +81,7 @@ extension ListViewController {
                 }
                 switch section {
                 case .activeChat:
-                    let cell = collectionView.dequeueReusableCell(
-                        withReuseIdentifier: "cell", for: indexPath)
-                    cell.backgroundColor = .blue
-                    return cell
+                    return self.configure(cellType: ActiveChatCell.self, with: chat, for: indexPath)
                 case .waitingChat:
                     let cell = collectionView.dequeueReusableCell(
                         withReuseIdentifier: "cell2", for: indexPath)
@@ -84,7 +92,7 @@ extension ListViewController {
         return dataSource
     }
     
-    func reloadData() {
+    private func reloadData() {
         var snapshot = NSDiffableDataSourceSnapshot<ListSection, Chat>()
         snapshot.appendSections([.waitingChat, .activeChat])
         snapshot.appendItems(waitingChats, toSection: .waitingChat)
@@ -96,7 +104,7 @@ extension ListViewController {
 // MARK: - UICollectionViewCompositionalLayout
 
 extension ListViewController {
-    func createCompositionalLayout() -> UICollectionViewCompositionalLayout {
+    private func createCompositionalLayout() -> UICollectionViewCompositionalLayout {
         let layout = UICollectionViewCompositionalLayout { (
             sectionIndex, layoutEnvironment) in
             
