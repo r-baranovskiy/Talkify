@@ -55,6 +55,7 @@
 		80E7740E294DD057002F11AA /* SmileTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E7740D294DD057002F11AA /* SmileTextField.swift */; };
 		80EBBCD329A53ECB005D5F53 /* waitingChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 80EBBCD129A53ECB005D5F53 /* waitingChats.json */; };
 		80EBBCD629A53EDA005D5F53 /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 80EBBCD529A53EDA005D5F53 /* activeChats.json */; };
+		80EBBCD929A550B4005D5F53 /* ActiveChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EBBCD829A550B4005D5F53 /* ActiveChatCell.swift */; };
 		80F83A78299FDD7B003518FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80F83A77299FDD7B003518FE /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +107,7 @@
 		80E7740D294DD057002F11AA /* SmileTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmileTextField.swift; sourceTree = "<group>"; };
 		80EBBCD129A53ECB005D5F53 /* waitingChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingChats.json; sourceTree = "<group>"; };
 		80EBBCD529A53EDA005D5F53 /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
+		80EBBCD829A550B4005D5F53 /* ActiveChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveChatCell.swift; sourceTree = "<group>"; };
 		80F83A77299FDD7B003518FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -339,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				80E4208829A044B200C72CE8 /* ListViewController.swift */,
+				80EBBCD729A5508B005D5F53 /* Cells */,
 			);
 			path = ListModule;
 			sourceTree = "<group>";
@@ -367,6 +370,14 @@
 				80EBBCD129A53ECB005D5F53 /* waitingChats.json */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		80EBBCD729A5508B005D5F53 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				80EBBCD829A550B4005D5F53 /* ActiveChatCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -454,6 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				80E4208929A044B200C72CE8 /* ListViewController.swift in Sources */,
+				80EBBCD929A550B4005D5F53 /* ActiveChatCell.swift in Sources */,
 				80CD7B5F29451E6300CEFA91 /* UIFont + Extension.swift in Sources */,
 				8049CFA2294C285100F0E1C5 /* Chat.swift in Sources */,
 				800B5CDD2926120800D9AECF /* StartAppViewController.swift in Sources */,
