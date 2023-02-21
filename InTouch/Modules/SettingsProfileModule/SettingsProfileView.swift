@@ -22,8 +22,7 @@ final class SettingsProfileView: UIView {
     
     //Buttons
     private let backButton = CustomButton.createBackButton()
-    private let goToChatButton = CustomButton(
-        text: "Общаться!", isShadow: true)
+    private let goToChatButton = CustomButton.createNavButton(title: "Общаться")
     
     //TextFields
     private (set) var nameTextField = CustomTextField.oneLineTextField()
@@ -31,7 +30,7 @@ final class SettingsProfileView: UIView {
     
     private (set) var userImageView: UIImageView = {
         let imageView = UIImageView(
-            imageName: KeysImages.emptyPhoto.rawValue,
+            imageName: Images.emptyUserImage.rawValue,
             contentMode: .scaleAspectFit, addBorder: true)
         imageView.isUserInteractionEnabled = true
         return imageView
@@ -48,7 +47,7 @@ final class SettingsProfileView: UIView {
     
     override init(frame: CGRect) {
         super .init(frame: frame)
-        backgroundColor = .backgoundImage()
+        backgroundColor = UIColor.CustomColor.mainBackground.color
         sexSegmentedControl.selectedSegmentIndex = 0
         configureStackViews()
         setTargets()

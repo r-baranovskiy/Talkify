@@ -2,16 +2,16 @@ import UIKit
 
 enum ListSection: Int, CaseIterable {
     case waitingChat
-    case activeChats
+    case activeChat
     
-    func description() -> String {
-        switch self {
-        case .waitingChat:
-            return "Ожидают подтверждения"
-        case .activeChats:
-            return "Ваши контакты"
-        }
-    }
+//    func description() -> String {
+//        switch self {
+//        case .activeChat:
+//            return "Ваши контакты"
+//        case .waitingChat:
+//            return "Ожидают подтверждения"
+//        }
+//    }
 }
 
 enum PeopleSection: Int, CaseIterable {

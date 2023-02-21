@@ -2,9 +2,8 @@ import UIKit
 
 extension UIImageView {
     
-    convenience init(imageName: String,
-                     contentMode: UIView.ContentMode,
-                     addBorder: Bool) {
+    convenience init(
+        imageName: String, contentMode: UIView.ContentMode, addBorder: Bool) {
         self.init()
         self.image = UIImage(named: imageName)
         self.contentMode = contentMode

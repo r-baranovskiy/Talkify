@@ -4,8 +4,8 @@ class SmileTextField: UITextField {
     
     let sendButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setImage(UIImage(named: KeysButtonsImages.publishInfoImage.rawValue),
-                        for: .normal)
+//        button.setImage(UIImage(named: KeysButtonsImages.publishInfoImage.rawValue),
+//                        for: .normal)
         button.tintColor = .lightGray
         return button
     }()

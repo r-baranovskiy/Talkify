@@ -25,14 +25,12 @@ final class RegisterView: UIView {
     
     //Buttons
     private let backButton = CustomButton.createBackButton()
-    private let registerButton = CustomButton(
-        text: "Регистрация", isShadow: false)
-    
+    private let registerButton = CustomButton.createNavButton(title: "Регистрация")
     //MARK: - Init
     
     override init(frame: CGRect) {
         super .init(frame: frame)
-        backgroundColor = .backgoundImage()
+        backgroundColor = UIColor.CustomColor.mainBackground.color
         configureStackView()
         setTargets()
         setConstraints()
