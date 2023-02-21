@@ -128,7 +128,6 @@
 		800B5CCC2926120800D9AECF = {
 			isa = PBXGroup;
 			children = (
-				80F83A77299FDD7B003518FE /* GoogleService-Info.plist */,
 				8049CFAB294D4D7200F0E1C5 /* README.md */,
 				80E77406294DBAA6002F11AA /* ScreenForReadmi */,
 				800B5CD72926120800D9AECF /* InTouch */,
@@ -236,6 +235,7 @@
 				800B5CE12926120B00D9AECF /* Assets.xcassets */,
 				800B5CE32926120B00D9AECF /* LaunchScreen.storyboard */,
 				800B5CE62926120B00D9AECF /* Info.plist */,
+				80F83A77299FDD7B003518FE /* GoogleService-Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
