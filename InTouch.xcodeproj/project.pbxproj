@@ -56,6 +56,7 @@
 		80EBBCD329A53ECB005D5F53 /* waitingChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 80EBBCD129A53ECB005D5F53 /* waitingChats.json */; };
 		80EBBCD629A53EDA005D5F53 /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 80EBBCD529A53EDA005D5F53 /* activeChats.json */; };
 		80EBBCD929A550B4005D5F53 /* ActiveChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EBBCD829A550B4005D5F53 /* ActiveChatCell.swift */; };
+		80EBBCDB29A56173005D5F53 /* WaitingChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EBBCDA29A56173005D5F53 /* WaitingChatCell.swift */; };
 		80F83A78299FDD7B003518FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80F83A77299FDD7B003518FE /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +109,7 @@
 		80EBBCD129A53ECB005D5F53 /* waitingChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingChats.json; sourceTree = "<group>"; };
 		80EBBCD529A53EDA005D5F53 /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
 		80EBBCD829A550B4005D5F53 /* ActiveChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveChatCell.swift; sourceTree = "<group>"; };
+		80EBBCDA29A56173005D5F53 /* WaitingChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatCell.swift; sourceTree = "<group>"; };
 		80F83A77299FDD7B003518FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -376,6 +378,7 @@
 			isa = PBXGroup;
 			children = (
 				80EBBCD829A550B4005D5F53 /* ActiveChatCell.swift */,
+				80EBBCDA29A56173005D5F53 /* WaitingChatCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 				807072EF2947E77700B9A3EB /* MainTabBarViewController.swift in Sources */,
 				801B933C29462CAB00F8EE36 /* UIViewController + Extension.swift in Sources */,
 				800B5CD92926120800D9AECF /* AppDelegate.swift in Sources */,
+				80EBBCDB29A56173005D5F53 /* WaitingChatCell.swift in Sources */,
 				80C182A9294BBF6500C29BF5 /* Enum + CollectionView.swift in Sources */,
 				80C182A6294BBBD400C29BF5 /* ConfiguringCell Protocol.swift in Sources */,
 				800B5CDB2926120800D9AECF /* SceneDelegate.swift in Sources */,
