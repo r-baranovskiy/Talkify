@@ -2,8 +2,10 @@ import UIKit
 
 class ListViewController: UIViewController  {
     
-    private let activeChats = Bundle.main.decode([Chat].self, from: "activeChats.json")
-    private let waitingChats = Bundle.main.decode([Chat].self, from: "waitingChats.json")
+    private let activeChats = Bundle.main.decode([Chat].self,
+                                                 from: "activeChats.json")
+    private let waitingChats = Bundle.main.decode([Chat].self,
+                                                  from: "waitingChats.json")
     
     private lazy var listCollectionView: UICollectionView = {
         let layout = createCompositionalLayout()
@@ -35,7 +37,7 @@ class ListViewController: UIViewController  {
     private func configureListCollectionView() {
         listCollectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         listCollectionView.register(
-            UICollectionViewCell.self, forCellWithReuseIdentifier: "cell2")
+            WaitingChatCell.self, forCellWithReuseIdentifier: WaitingChatCell.reuseID)
         listCollectionView.register(
             ActiveChatCell.self, forCellWithReuseIdentifier: ActiveChatCell.reuseID)
     }
@@ -81,12 +83,11 @@ extension ListViewController {
                 }
                 switch section {
                 case .activeChat:
-                    return self.configure(cellType: ActiveChatCell.self, with: chat, for: indexPath)
+                    return self.configure(
+                        cellType: ActiveChatCell.self, with: chat, for: indexPath)
                 case .waitingChat:
-                    let cell = collectionView.dequeueReusableCell(
-                        withReuseIdentifier: "cell2", for: indexPath)
-                    cell.backgroundColor = .red
-                    return cell
+                    return self.configure(
+                        cellType: WaitingChatCell.self, with: chat, for: indexPath)
                 }
             }
         return dataSource

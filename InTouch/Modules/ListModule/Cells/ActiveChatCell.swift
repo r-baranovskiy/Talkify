@@ -56,35 +56,20 @@ final class ActiveChatCell: UICollectionViewCell, ConfiguringCell {
         NSLayoutConstraint.activate([
             friendNameLabel.topAnchor.constraint(
                 equalTo: topAnchor, constant: 12),
-            friendNameLabel.leadingAnchor.constraint(equalTo: friendImageView.trailingAnchor, constant: 16),
+            friendNameLabel.leadingAnchor.constraint(
+                equalTo: friendImageView.trailingAnchor, constant: 16),
             friendNameLabel.trailingAnchor.constraint(
                 equalTo: gradientView.leadingAnchor, constant: -16)
         ])
         
         NSLayoutConstraint.activate([
-            lastMessageLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -12),
-            lastMessageLabel.leadingAnchor.constraint(equalTo: friendImageView.trailingAnchor, constant: 16),
-            lastMessageLabel.trailingAnchor.constraint(equalTo: gradientView.leadingAnchor, constant: -16)
+            lastMessageLabel.bottomAnchor.constraint(
+                equalTo: bottomAnchor, constant: -12),
+            lastMessageLabel.leadingAnchor.constraint(
+                equalTo: friendImageView.trailingAnchor, constant: 16),
+            lastMessageLabel.trailingAnchor.constraint(
+                equalTo: gradientView.leadingAnchor, constant: -16)
         ])
-    }
-}
-
-import SwiftUI
-struct ListProvider: PreviewProvider {
-    static var previews: some View {
-        ContainerView().edgesIgnoringSafeArea(.all)
-    }
-    
-    struct ContainerView: UIViewControllerRepresentable {
-        
-        let listVC = MainTabBarViewController()
-        
-        func makeUIViewController(context: UIViewControllerRepresentableContext<ListProvider.ContainerView>) -> MainTabBarViewController {
-            return listVC
-        }
-        
-        func updateUIViewController(_ uiViewController: ListProvider.ContainerView.UIViewControllerType, context: UIViewControllerRepresentableContext<ListProvider.ContainerView>) {
-        }
     }
 }
 
