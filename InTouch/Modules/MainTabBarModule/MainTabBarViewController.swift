@@ -13,11 +13,11 @@ final class MainTabBarViewController: UITabBarController {
         tabBar.backgroundColor = UIColor.CustomColor.tabBarBackground.color
         viewControllers = [
             createNavigationVC(
-                rootVC: listViewController, title: "Диалоги",
-                imageSystemName: "message.badge.circle.fill"),
+                rootVC: peopleViewController, title: "Люди",
+                imageSystemName: "person.2.fill"),
             createNavigationVC(
-                rootVC: peopleViewController, title: "Контакты",
-                imageSystemName: "person.2.fill")
+                rootVC: listViewController, title: "Диалоги",
+                imageSystemName: "message.badge.circle.fill")
         ]
     }
     
