@@ -4,14 +4,15 @@ enum ListSection: Int, CaseIterable {
     case waitingChat
     case activeChat
     
-//    func description() -> String {
-//        switch self {
-//        case .activeChat:
-//            return "Ваши контакты"
-//        case .waitingChat:
-//            return "Ожидают подтверждения"
-//        }
-//    }
+    func description() -> String {
+        switch self {
+        case .waitingChat:
+            return "Ожидают подтверждения"
+        case .activeChat:
+            return "Ваши контакты"
+        }
+        
+    }
 }
 
 enum PeopleSection: Int, CaseIterable {
