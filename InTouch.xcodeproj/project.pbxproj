@@ -47,6 +47,7 @@
 		80CD7B612945247400CEFA91 /* UIStackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CD7B602945247400CEFA91 /* UIStackView + Extension.swift */; };
 		80CD7B662945310500CEFA91 /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CD7B652945310500CEFA91 /* CustomButtons.swift */; };
 		80D6C02729A5736F0054D5B2 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6C02629A5736F0054D5B2 /* SectionHeader.swift */; };
+		80D6C02929A57BC90054D5B2 /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 80D6C02829A57BC90054D5B2 /* users.json */; };
 		80E076D7292752A300499ECF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E076D6292752A300499ECF /* LoginViewController.swift */; };
 		80E076D929278BED00499ECF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E076D829278BED00499ECF /* LoginView.swift */; };
 		80E4208429A0259D00C72CE8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E4208329A0259D00C72CE8 /* Constants.swift */; };
@@ -101,6 +102,7 @@
 		80CD7B602945247400CEFA91 /* UIStackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extension.swift"; sourceTree = "<group>"; };
 		80CD7B652945310500CEFA91 /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
 		80D6C02629A5736F0054D5B2 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		80D6C02829A57BC90054D5B2 /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
 		80E076D6292752A300499ECF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		80E076D829278BED00499ECF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		80E4208329A0259D00C72CE8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -379,6 +381,7 @@
 			isa = PBXGroup;
 			children = (
 				800CA6CA2949B2CC000096C4 /* Bundle-Decodable.swift */,
+				80D6C02829A57BC90054D5B2 /* users.json */,
 				80EBBCD529A53EDA005D5F53 /* activeChats.json */,
 				80EBBCD129A53ECB005D5F53 /* waitingChats.json */,
 			);
@@ -463,6 +466,7 @@
 				80EBBCD329A53ECB005D5F53 /* waitingChats.json in Resources */,
 				800B5CE52926120B00D9AECF /* LaunchScreen.storyboard in Resources */,
 				80E7740C294DC201002F11AA /* ScreenLogin.png in Resources */,
+				80D6C02929A57BC90054D5B2 /* users.json in Resources */,
 				800B5CE22926120B00D9AECF /* Assets.xcassets in Resources */,
 				8049CFAC294D4D7200F0E1C5 /* README.md in Resources */,
 				80A6B02D29265ABC00A25042 /* beerMoney.ttf in Resources */,

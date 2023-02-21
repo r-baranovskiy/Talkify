@@ -1,8 +1,8 @@
 import UIKit
 
-struct ChatUser: Hashable {
+struct ChatUser: Hashable, Decodable {
     var username: String
-    var avatarImageString: String
+    var avatarStringURL: String
     var id: Int
     
     func hash(into hasher: inout Hasher) {
