@@ -1,19 +1,18 @@
 import UIKit
 
-class SmileTextField: UITextField {
+final class SmileTextField: UITextField {
     
     let sendButton: UIButton = {
         let button = UIButton(type: .system)
-//        button.setImage(UIImage(named: KeysButtonsImages.publishInfoImage.rawValue),
-//                        for: .normal)
-        button.tintColor = .lightGray
+        button.setImage(UIImage(named: "publishImageForButton"), for: .normal)
+        button.tintColor = .label
         return button
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         //Setup TextField
-        backgroundColor = .white
+        backgroundColor = .systemBackground
         placeholder = "Напишите что-нибудь о себе"
         font = .systemFont(ofSize: 16)
         clearButtonMode = .whileEditing
@@ -23,7 +22,7 @@ class SmileTextField: UITextField {
         
         //Add left image
         let leftImageView = UIImageView(image: UIImage(systemName: "smiley"))
-        leftImageView.tintColor = .lightGray
+        leftImageView.tintColor = .label
         leftView = leftImageView
         leftView?.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
         leftViewMode = .always
