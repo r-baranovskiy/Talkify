@@ -22,7 +22,6 @@
 		8049CFA2294C285100F0E1C5 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8049CFA1294C285100F0E1C5 /* Chat.swift */; };
 		8049CFA4294C28BE00F0E1C5 /* ChatUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8049CFA3294C28BE00F0E1C5 /* ChatUser.swift */; };
 		8049CFA8294D2BF500F0E1C5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8049CFA7294D2BF500F0E1C5 /* ProfileViewController.swift */; };
-		8049CFAA294D2C5600F0E1C5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8049CFA9294D2C5600F0E1C5 /* ProfileView.swift */; };
 		8049CFAC294D4D7200F0E1C5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8049CFAB294D4D7200F0E1C5 /* README.md */; };
 		80545E152926C1510084222E /* UILabel + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80545E142926C1510084222E /* UILabel + Extension.swift */; };
 		807072EF2947E77700B9A3EB /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807072EE2947E77700B9A3EB /* MainTabBarViewController.swift */; };
@@ -78,7 +77,6 @@
 		8049CFA1294C285100F0E1C5 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		8049CFA3294C28BE00F0E1C5 /* ChatUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUser.swift; sourceTree = "<group>"; };
 		8049CFA7294D2BF500F0E1C5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		8049CFA9294D2C5600F0E1C5 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		8049CFAB294D4D7200F0E1C5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		80545E142926C1510084222E /* UILabel + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extension.swift"; sourceTree = "<group>"; };
 		807072EE2947E77700B9A3EB /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
@@ -339,7 +337,6 @@
 		80E4208129A0166B00C72CE8 /* ProfileModule */ = {
 			isa = PBXGroup;
 			children = (
-				8049CFA9294D2C5600F0E1C5 /* ProfileView.swift */,
 				8049CFA7294D2BF500F0E1C5 /* ProfileViewController.swift */,
 			);
 			path = ProfileModule;
@@ -518,7 +515,6 @@
 				80B0AADE29472B640082D6D9 /* UIColor + Extension.swift in Sources */,
 				80A6B0252926561800A25042 /* RegisterView.swift in Sources */,
 				80D6C02B29A58B670054D5B2 /* ChatUserCell.swift in Sources */,
-				8049CFAA294D2C5600F0E1C5 /* ProfileView.swift in Sources */,
 				80CD7B662945310500CEFA91 /* CustomButtons.swift in Sources */,
 				80E4208F29A048B900C72CE8 /* PeopleViewController.swift in Sources */,
 				80A6B01129263AF300A25042 /* RegisterViewController.swift in Sources */,
