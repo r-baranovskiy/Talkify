@@ -70,15 +70,15 @@ extension ListViewController: UISearchBarDelegate {
 
 extension ListViewController {
     
-    private func configure<T: ConfiguringCell>(cellType: T.Type, with value: Chat,
-                                               for indexPath: IndexPath) -> T {
-        guard let cell = listCollectionView.dequeueReusableCell(
-            withReuseIdentifier: cellType.reuseID, for: indexPath) as? T else {
-            fatalError("Unable to deque the cell")
+    private func configure<T: ConfiguringCell, U: Hashable>(
+        cellType: T.Type, with value: U, for indexPath: IndexPath) -> T {
+            guard let cell = listCollectionView.dequeueReusableCell(
+                withReuseIdentifier: cellType.reuseID, for: indexPath) as? T else {
+                fatalError("Unable to deque the cell")
+            }
+            cell.configure(with: value)
+            return cell
         }
-        cell.configure(with: value)
-        return cell
-    }
     
     private func createDataSource() -> UICollectionViewDiffableDataSource<ListSection, Chat> {
         let dataSource = UICollectionViewDiffableDataSource<ListSection, Chat>(
@@ -89,11 +89,11 @@ extension ListViewController {
                 }
                 switch section {
                 case .activeChat:
-                    return self.configure(
-                        cellType: ActiveChatCell.self, with: chat, for: indexPath)
+                    return self.configure(cellType: ActiveChatCell.self,
+                                          with: chat, for: indexPath)
                 case .waitingChat:
-                    return self.configure(
-                        cellType: WaitingChatCell.self, with: chat, for: indexPath)
+                    return self.configure(cellType: WaitingChatCell.self,
+                                          with: chat, for: indexPath)
                 }
             }
         dataSource.supplementaryViewProvider = { collectionView, kind, indexPath in

@@ -8,6 +8,8 @@ extension UIColor {
         case collectionViewBackground
         case startGradientCell
         case endGradientCell
+        case peopleCellBackground
+        case peopleCellShadow
         
         var color: UIColor {
             switch self {
@@ -27,6 +29,10 @@ extension UIColor {
                 return UIColor(named: "cellGradientStart") ?? .red
             case .endGradientCell:
                 return UIColor(named: "cellGradientEnd") ?? .black
+            case .peopleCellBackground:
+                return UIColor(named: "peopleCellBackground") ?? .systemBackground
+            case .peopleCellShadow:
+                return UIColor(named: "peopleCellShadow") ?? .systemGroupedBackground
             }
         }
     }

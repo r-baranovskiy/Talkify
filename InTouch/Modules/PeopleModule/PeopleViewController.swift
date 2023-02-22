@@ -46,8 +46,8 @@ final class PeopleViewController: UIViewController {
     private func configurePeopleCollectionView() {
         peopleCollectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
-        peopleCollectionView.register(UICollectionViewCell.self,
-                                      forCellWithReuseIdentifier: "cell")
+        peopleCollectionView.register(
+            ChatUserCell.self, forCellWithReuseIdentifier: ChatUserCell.reuseID)
         
         peopleCollectionView.register(
             SectionHeader.self,
@@ -122,6 +122,17 @@ extension PeopleViewController {
 // MARK: - UICollectionViewDiffableDataSource
 
 extension PeopleViewController {
+    
+    private func configure<T: ConfiguringCell, U: Hashable>(
+        cellType: T.Type, with value: U, for indexPath: IndexPath) -> T {
+            guard let cell = peopleCollectionView.dequeueReusableCell(
+                withReuseIdentifier: cellType.reuseID, for: indexPath) as? T else {
+                fatalError("Unable to deque the cell")
+            }
+            cell.configure(with: value)
+            return cell
+        }
+    
     private func createDataSource() -> UICollectionViewDiffableDataSource<PeopleSection, ChatUser> {
         let dataSource = UICollectionViewDiffableDataSource<PeopleSection, ChatUser>(
             collectionView: peopleCollectionView) { (
@@ -131,9 +142,12 @@ extension PeopleViewController {
                 }
                 switch section {
                 case .users:
-                    let cell = collectionView.dequeueReusableCell(
-                        withReuseIdentifier: "cell", for: indexPath)
-                    cell.backgroundColor = .green
+                    guard let cell = collectionView.dequeueReusableCell(
+                        withReuseIdentifier: ChatUserCell.reuseID,
+                        for: indexPath) as? ChatUserCell else {
+                        fatalError("")
+                    }
+                    cell.configure(with: user)
                     return cell
                 }
             }
