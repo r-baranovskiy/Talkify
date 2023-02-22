@@ -1,6 +1,7 @@
 import UIKit
 
 final class ActiveChatCell: UICollectionViewCell, ConfiguringCell {
+
     static let reuseID: String = "ActiveChatCell"
     
     private let friendImageView = UIImageView()
@@ -25,10 +26,11 @@ final class ActiveChatCell: UICollectionViewCell, ConfiguringCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(with value: Chat) {
-        friendImageView.image = UIImage(named: value.userImageString)
-        friendNameLabel.text = value.username
-        lastMessageLabel.text = value.lastMessage
+    func configure<U>(with value: U) where U : Hashable {
+        guard let chat: Chat = value as? Chat else { return }
+        friendImageView.image = UIImage(named: chat.userImageString)
+        friendNameLabel.text = chat.username
+        lastMessageLabel.text = chat.lastMessage
     }
     
     // MARK: - Constraints
