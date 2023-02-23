@@ -35,8 +35,7 @@
 		80B0AADA2946E2F70082D6D9 /* SettingsProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B0AAD92946E2F70082D6D9 /* SettingsProfileViewController.swift */; };
 		80B0AADC2946E9E60082D6D9 /* UIImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B0AADB2946E9E60082D6D9 /* UIImageView + Extension.swift */; };
 		80B0AADE29472B640082D6D9 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B0AADD29472B640082D6D9 /* UIColor + Extension.swift */; };
-		80B8BD77294E4212007078D1 /* ChatRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8BD76294E4212007078D1 /* ChatRequestViewController.swift */; };
-		80B8BD79294E4248007078D1 /* ChatRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8BD78294E4248007078D1 /* ChatRequestView.swift */; };
+		80B8BD77294E4212007078D1 /* UserRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8BD76294E4212007078D1 /* UserRequestViewController.swift */; };
 		80C182A2294B3FD600C29BF5 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C182A1294B3FD600C29BF5 /* GradientView.swift */; };
 		80C182A6294BBBD400C29BF5 /* ConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C182A5294BBBD400C29BF5 /* ConfiguringCell.swift */; };
 		80C182A9294BBF6500C29BF5 /* Enum + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C182A8294BBF6500C29BF5 /* Enum + CollectionView.swift */; };
@@ -90,8 +89,7 @@
 		80B0AAD92946E2F70082D6D9 /* SettingsProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProfileViewController.swift; sourceTree = "<group>"; };
 		80B0AADB2946E9E60082D6D9 /* UIImageView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extension.swift"; sourceTree = "<group>"; };
 		80B0AADD29472B640082D6D9 /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
-		80B8BD76294E4212007078D1 /* ChatRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestViewController.swift; sourceTree = "<group>"; };
-		80B8BD78294E4248007078D1 /* ChatRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestView.swift; sourceTree = "<group>"; };
+		80B8BD76294E4212007078D1 /* UserRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequestViewController.swift; sourceTree = "<group>"; };
 		80C182A1294B3FD600C29BF5 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		80C182A5294BBBD400C29BF5 /* ConfiguringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguringCell.swift; sourceTree = "<group>"; };
 		80C182A8294BBF6500C29BF5 /* Enum + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Enum + CollectionView.swift"; sourceTree = "<group>"; };
@@ -285,7 +283,7 @@
 				80E4208729A0447C00C72CE8 /* ListModule */,
 				80E4208D29A0489C00C72CE8 /* PeopleModule */,
 				80E4208129A0166B00C72CE8 /* ProfileModule */,
-				80E4208229A0169C00C72CE8 /* ChatRequestModule */,
+				80E4208229A0169C00C72CE8 /* UserRequestModule */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -342,13 +340,12 @@
 			path = ProfileModule;
 			sourceTree = "<group>";
 		};
-		80E4208229A0169C00C72CE8 /* ChatRequestModule */ = {
+		80E4208229A0169C00C72CE8 /* UserRequestModule */ = {
 			isa = PBXGroup;
 			children = (
-				80B8BD78294E4248007078D1 /* ChatRequestView.swift */,
-				80B8BD76294E4212007078D1 /* ChatRequestViewController.swift */,
+				80B8BD76294E4212007078D1 /* UserRequestViewController.swift */,
 			);
-			path = ChatRequestModule;
+			path = UserRequestModule;
 			sourceTree = "<group>";
 		};
 		80E4208729A0447C00C72CE8 /* ListModule */ = {
@@ -500,7 +497,6 @@
 				80109D252955085E003D5544 /* AuthService.swift in Sources */,
 				80A6B021292652B700A25042 /* StartAppView.swift in Sources */,
 				80E076D929278BED00499ECF /* LoginView.swift in Sources */,
-				80B8BD79294E4248007078D1 /* ChatRequestView.swift in Sources */,
 				80D6C02729A5736F0054D5B2 /* SectionHeader.swift in Sources */,
 				80E7740E294DD057002F11AA /* SmileTextField.swift in Sources */,
 				80CD7B612945247400CEFA91 /* UIStackView + Extension.swift in Sources */,
@@ -508,7 +504,7 @@
 				801B933A29461B6200F8EE36 /* CustomTextField.swift in Sources */,
 				80B0AADC2946E9E60082D6D9 /* UIImageView + Extension.swift in Sources */,
 				80CA4B8D2955258700D153CE /* Enum + AuthErrors.swift in Sources */,
-				80B8BD77294E4212007078D1 /* ChatRequestViewController.swift in Sources */,
+				80B8BD77294E4212007078D1 /* UserRequestViewController.swift in Sources */,
 				80545E152926C1510084222E /* UILabel + Extension.swift in Sources */,
 				80E076D7292752A300499ECF /* LoginViewController.swift in Sources */,
 				8049CFA4294C28BE00F0E1C5 /* ChatUser.swift in Sources */,
