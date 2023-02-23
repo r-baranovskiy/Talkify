@@ -26,17 +26,17 @@ final class CustomButton {
         return button
     }
     
-    //    static func createDenyButton() -> UIButton {
-    //        let button = UIButton(type: .system)
-    //        button.setTitle("Deny", for: .normal)
-    //        button.setTitleColor(UIColor(named: KeysColor.denyButtonColor.rawValue), for: .normal)
-    //        button.backgroundColor = .white
-    //        button.titleLabel?.font = .laoSangamMN20()
-    //        button.layer.cornerRadius = 10
-    //        button.layer.borderWidth = 1.2
-    //        button.layer.borderColor = UIColor(named: KeysColor.denyButtonColor.rawValue)?.cgColor
-    //        return button
-    //    }
+        static func createDenyButton() -> UIButton {
+            let button = UIButton(type: .system)
+            button.setTitle("Deny", for: .normal)
+            button.setTitleColor(.systemRed, for: .normal)
+            button.backgroundColor = .white
+            button.titleLabel?.font = .laoSangamMN20()
+            button.layer.cornerRadius = 10
+            button.layer.borderWidth = 1.2
+            button.layer.borderColor = UIColor.systemRed.cgColor
+            return button
+        }
     
     static func createGoogleButton() -> UIButton {
         let button = UIButton()
