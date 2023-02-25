@@ -1,4 +1,4 @@
-# The application InTouch
+# The application Talkify
 
 ### In this app you can:
 
