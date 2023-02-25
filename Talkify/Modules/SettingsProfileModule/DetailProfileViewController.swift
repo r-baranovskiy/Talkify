@@ -1,6 +1,6 @@
 import UIKit
 
-final class SettingsProfileViewController: UIViewController, UINavigationControllerDelegate {
+final class DetailProfileViewController: UIViewController, UINavigationControllerDelegate {
     
     private let settingsProfileView = SettingsProfileView()
     
@@ -76,7 +76,7 @@ final class SettingsProfileViewController: UIViewController, UINavigationControl
 
 // MARK: - SettingsProfileViewDelegate
 
-extension SettingsProfileViewController: SettingsProfileViewDelegate {
+extension DetailProfileViewController: SettingsProfileViewDelegate {
     func backButtonDidTap() {
         dismiss(animated: true)
     }
@@ -88,7 +88,7 @@ extension SettingsProfileViewController: SettingsProfileViewDelegate {
 
 //MARK: - UIImagePickerControllerDelegate
 
-extension SettingsProfileViewController: UIImagePickerControllerDelegate {
+extension DetailProfileViewController: UIImagePickerControllerDelegate {
     
     private func presentPhotoActionAlert() {
         let changeAlert = UIAlertController(
