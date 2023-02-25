@@ -32,7 +32,7 @@
 		80A6B02A2926594000A25042 /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A6B0292926594000A25042 /* UIView + Extension.swift */; };
 		80A6B02D29265ABC00A25042 /* beerMoney.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80A6B02C29265ABC00A25042 /* beerMoney.ttf */; };
 		80B0AAD82946E2E00082D6D9 /* SettingsProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B0AAD72946E2E00082D6D9 /* SettingsProfileView.swift */; };
-		80B0AADA2946E2F70082D6D9 /* SettingsProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B0AAD92946E2F70082D6D9 /* SettingsProfileViewController.swift */; };
+		80B0AADA2946E2F70082D6D9 /* DetailProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B0AAD92946E2F70082D6D9 /* DetailProfileViewController.swift */; };
 		80B0AADC2946E9E60082D6D9 /* UIImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B0AADB2946E9E60082D6D9 /* UIImageView + Extension.swift */; };
 		80B0AADE29472B640082D6D9 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B0AADD29472B640082D6D9 /* UIColor + Extension.swift */; };
 		80B8BD77294E4212007078D1 /* UserRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8BD76294E4212007078D1 /* UserRequestViewController.swift */; };
@@ -78,6 +78,7 @@
 		8049CFAB294D4D7200F0E1C5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		80545E142926C1510084222E /* UILabel + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extension.swift"; sourceTree = "<group>"; };
 		807072EE2947E77700B9A3EB /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		807193E429AA0FBE00BA439E /* Talkify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Talkify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80A41034292CABD000C527CB /* UIAlertController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController + Extensions.swift"; sourceTree = "<group>"; };
 		80A6B01029263AF300A25042 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		80A6B020292652B700A25042 /* StartAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAppView.swift; sourceTree = "<group>"; };
@@ -85,7 +86,7 @@
 		80A6B0292926594000A25042 /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		80A6B02C29265ABC00A25042 /* beerMoney.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = beerMoney.ttf; sourceTree = "<group>"; };
 		80B0AAD72946E2E00082D6D9 /* SettingsProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProfileView.swift; sourceTree = "<group>"; };
-		80B0AAD92946E2F70082D6D9 /* SettingsProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProfileViewController.swift; sourceTree = "<group>"; };
+		80B0AAD92946E2F70082D6D9 /* DetailProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProfileViewController.swift; sourceTree = "<group>"; };
 		80B0AADB2946E9E60082D6D9 /* UIImageView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extension.swift"; sourceTree = "<group>"; };
 		80B0AADD29472B640082D6D9 /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		80B8BD76294E4212007078D1 /* UserRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequestViewController.swift; sourceTree = "<group>"; };
@@ -112,7 +113,6 @@
 		80EBBCD529A53EDA005D5F53 /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
 		80EBBCD829A550B4005D5F53 /* ActiveChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveChatCell.swift; sourceTree = "<group>"; };
 		80EBBCDA29A56173005D5F53 /* WaitingChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatCell.swift; sourceTree = "<group>"; };
-		80F4D07529AA0A02000939CF /* Talkify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Talkify.app; path = "/Users/rus-kashchenko/Desktop/Develop/Projects/InTouch/build/Debug-iphoneos/Talkify.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +135,7 @@
 				8049CFAB294D4D7200F0E1C5 /* README.md */,
 				80E77406294DBAA6002F11AA /* ScreenForReadmi */,
 				800B5CD72926120800D9AECF /* Talkify */,
+				807193E429AA0FBE00BA439E /* Talkify.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -318,7 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				80B0AAD72946E2E00082D6D9 /* SettingsProfileView.swift */,
-				80B0AAD92946E2F70082D6D9 /* SettingsProfileViewController.swift */,
+				80B0AAD92946E2F70082D6D9 /* DetailProfileViewController.swift */,
 			);
 			path = SettingsProfileModule;
 			sourceTree = "<group>";
@@ -415,7 +416,7 @@
 				80109D1F2954FADC003D5544 /* FirebaseFirestore */,
 			);
 			productName = InTouch;
-			productReference = 80F4D07529AA0A02000939CF /* Talkify.app */;
+			productReference = 807193E429AA0FBE00BA439E /* Talkify.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -516,7 +517,7 @@
 				80B0AAD82946E2E00082D6D9 /* SettingsProfileView.swift in Sources */,
 				80C182A2294B3FD600C29BF5 /* GradientView.swift in Sources */,
 				8049CFA8294D2BF500F0E1C5 /* ProfileViewController.swift in Sources */,
-				80B0AADA2946E2F70082D6D9 /* SettingsProfileViewController.swift in Sources */,
+				80B0AADA2946E2F70082D6D9 /* DetailProfileViewController.swift in Sources */,
 				80E4208429A0259D00C72CE8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

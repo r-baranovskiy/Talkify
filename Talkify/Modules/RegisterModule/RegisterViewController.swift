@@ -51,13 +51,13 @@ extension RegisterViewController: RegisterViewDelegate {
         dismiss(animated: true)
     }
     
-    func registerButtonDidTap() {
+    func continueButtonDidTap() {
         AuthService.shared.register(
             email: emailTextField.text, password: passwordTextField.text,
             confirmPassword: confirmPasswordTextField.text) { result in
                 switch result {
                 case .success(_):
-                    let settingsProfileVC = SettingsProfileViewController()
+                    let settingsProfileVC = DetailProfileViewController()
                     settingsProfileVC.modalTransitionStyle = .crossDissolve
                     settingsProfileVC.modalPresentationStyle = .fullScreen
                     self.present(settingsProfileVC, animated: true)
@@ -88,7 +88,7 @@ extension RegisterViewController: UITextFieldDelegate {
         case passwordTextField:
             confirmPasswordTextField.becomeFirstResponder()
         case confirmPasswordTextField:
-            registerButtonDidTap()
+            continueButtonDidTap()
         default:
             break
         }

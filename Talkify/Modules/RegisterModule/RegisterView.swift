@@ -2,7 +2,7 @@ import UIKit
 
 protocol RegisterViewDelegate: AnyObject {
     func backButtonDidTap()
-    func registerButtonDidTap()
+    func continueButtonDidTap()
 }
 
 /// This view class that displays in RegisterViewController
@@ -25,7 +25,7 @@ final class RegisterView: UIView {
     
     //Buttons
     private let backButton = CustomButton.createBackButton()
-    private let registerButton = CustomButton.createNavButton(title: "Регистрация")
+    private let continueButton = CustomButton.createNavButton(title: "Продолжить")
     //MARK: - Init
     
     override init(frame: CGRect) {
@@ -45,7 +45,7 @@ final class RegisterView: UIView {
     private func setTargets() {
         backButton.addTarget(self, action: #selector(backButtonTapped),
                              for: .touchUpInside)
-        registerButton.addTarget(self, action: #selector(registerButtonTapped),
+        continueButton.addTarget(self, action: #selector(continueButtonTapped),
                                  for: .touchUpInside)
     }
     
@@ -53,8 +53,8 @@ final class RegisterView: UIView {
         delegate?.backButtonDidTap()
     }
     
-    @objc private func registerButtonTapped() {
-        delegate?.registerButtonDidTap()
+    @objc private func continueButtonTapped() {
+        delegate?.continueButtonDidTap()
     }
     
     //MARK: - Appearance
@@ -76,7 +76,7 @@ final class RegisterView: UIView {
     //MARK: - Constraints
     
     private func setConstraints() {
-        addSubviewWithoutTranslates(fieldsStackView, registerButton, backButton)
+        addSubviewWithoutTranslates(fieldsStackView, continueButton, backButton)
         
         NSLayoutConstraint.activate([
             backButton.topAnchor.constraint(
@@ -92,13 +92,13 @@ final class RegisterView: UIView {
             fieldsStackView.trailingAnchor.constraint(
                 equalTo: trailingAnchor, constant: -40),
             
-            registerButton.topAnchor.constraint(
+            continueButton.topAnchor.constraint(
                 equalTo: fieldsStackView.bottomAnchor, constant: 40),
-            registerButton.leadingAnchor.constraint(
+            continueButton.leadingAnchor.constraint(
                 equalTo: leadingAnchor, constant: 80),
-            registerButton.trailingAnchor.constraint(
+            continueButton.trailingAnchor.constraint(
                 equalTo: trailingAnchor, constant: -80),
-            registerButton.heightAnchor.constraint(equalToConstant: 54)
+            continueButton.heightAnchor.constraint(equalToConstant: 54)
         ])
     }
 }
