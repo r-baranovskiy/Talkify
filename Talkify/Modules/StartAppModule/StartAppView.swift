@@ -94,7 +94,7 @@ final class StartAppView: UIView {
     //MARK: - Appearance
     
     private func showAnimatedMainLabel() {
-        let nameLabel = "In Touch"
+        let nameLabel = "Talkify"
         var charIndex = 0.0
         
         for char in nameLabel {
